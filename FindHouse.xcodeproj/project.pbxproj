@@ -59,6 +59,7 @@
 		6D3C00AC1DD081990029A37F /* CXMineNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3C00AB1DD081990029A37F /* CXMineNormalCell.m */; };
 		6D3C00B01DD08ACF0029A37F /* CXMessageNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3C00AF1DD08ACF0029A37F /* CXMessageNormalCell.m */; };
 		6D3C00B41DD095A80029A37F /* CXSearchHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3C00B31DD095A80029A37F /* CXSearchHouseViewController.m */; };
+		6D3C00B81DD099E60029A37F /* CXSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3C00B71DD099E60029A37F /* CXSearchView.m */; };
 		6D3CFFD01DD0209C0029A37F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3CFFCF1DD0209C0029A37F /* main.m */; };
 		6D3CFFD31DD0209C0029A37F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3CFFD21DD0209C0029A37F /* AppDelegate.m */; };
 		6D3CFFDB1DD0209C0029A37F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D3CFFDA1DD0209C0029A37F /* Assets.xcassets */; };
@@ -151,6 +152,8 @@
 		6D3C00AF1DD08ACF0029A37F /* CXMessageNormalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMessageNormalCell.m; sourceTree = "<group>"; };
 		6D3C00B21DD095A80029A37F /* CXSearchHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSearchHouseViewController.h; sourceTree = "<group>"; };
 		6D3C00B31DD095A80029A37F /* CXSearchHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSearchHouseViewController.m; sourceTree = "<group>"; };
+		6D3C00B61DD099E60029A37F /* CXSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSearchView.h; sourceTree = "<group>"; };
+		6D3C00B71DD099E60029A37F /* CXSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSearchView.m; sourceTree = "<group>"; };
 		6D3CFFCB1DD0209C0029A37F /* FindHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D3CFFCF1DD0209C0029A37F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6D3CFFD11DD0209C0029A37F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -395,10 +398,20 @@
 		6D3C00B11DD095980029A37F /* 搜索 */ = {
 			isa = PBXGroup;
 			children = (
+				6D3C00B51DD099CB0029A37F /* View */,
 				6D3C00B21DD095A80029A37F /* CXSearchHouseViewController.h */,
 				6D3C00B31DD095A80029A37F /* CXSearchHouseViewController.m */,
 			);
 			name = "搜索";
+			sourceTree = "<group>";
+		};
+		6D3C00B51DD099CB0029A37F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D3C00B61DD099E60029A37F /* CXSearchView.h */,
+				6D3C00B71DD099E60029A37F /* CXSearchView.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		6D3CFFC21DD0209B0029A37F = {
@@ -636,6 +649,7 @@
 				6D3C00591DD023020029A37F /* CXUser.m in Sources */,
 				6D3C00A21DD0717D0029A37F /* CXHomeMarketView.m in Sources */,
 				6D3C005D1DD023020029A37F /* YYViewPicturesScrollView.m in Sources */,
+				6D3C00B81DD099E60029A37F /* CXSearchView.m in Sources */,
 				6D3C00471DD023020029A37F /* CXBaseImageView.m in Sources */,
 				6D3CFFD31DD0209C0029A37F /* AppDelegate.m in Sources */,
 				6D3C00981DD066260029A37F /* CXNetworkingTool.m in Sources */,

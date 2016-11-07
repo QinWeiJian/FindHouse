@@ -7,12 +7,14 @@
 //
 
 #import "CXSearchHouseViewController.h"
+#import "CXSearchView.h"
 
 @interface CXSearchHouseViewController ()
 
 @property(nonatomic,retain)CXBaseView *navigationBarView;
 @property(nonatomic,retain)UIButton *backButton;
 @property(nonatomic,retain)UIButton *mapButton;
+@property(nonatomic,retain)CXSearchView *searchView;
 
 @end
 
@@ -48,6 +50,7 @@
         
         [_navigationBarView addSubview:self.backButton];
         [_navigationBarView addSubview:self.mapButton];
+        [_navigationBarView addSubview:self.searchView];
     }
     
     return _navigationBarView;
@@ -75,6 +78,16 @@
     }
     
     return _mapButton;
+}
+
+- (CXSearchView *)searchView
+{
+    if (!_searchView)
+    {
+        _searchView = [[CXSearchView alloc] initWithFrame:CGRectMake(self.backButton.viewDistanceX, StatusBarHeight+ViewMargin_5, self.mapButton.viewOriginX-self.backButton.viewDistanceX, NavigationBarHeight-ViewMargin_10)];
+    }
+    
+    return _searchView;
 }
 
 @end
