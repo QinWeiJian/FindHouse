@@ -1,0 +1,91 @@
+//
+//  FindHouse.pch
+//  FindHouse
+//
+//  Created by chengxikeji on 16/11/7.
+//  Copyright © 2016年 cx. All rights reserved.
+//
+
+#ifndef FindHouse_pch
+#define FindHouse_pch
+
+/**颜色*/
+#import "CXColor.h"
+
+/**接口*/
+#import "CXInterface.h"
+
+/**用户*/
+#import "CXUser.h"
+
+/**通知*/
+#import "CXNotification.h"
+
+#import "CXUserDefault.h"
+
+/**Category*/
+#import "UIViewController+CXViewController.h"
+#import "NSString+CXString.h"
+#import "UIImageView+CXWebImageView.h"
+#import "UIView+CXView.h"
+
+/**Public*/
+#import "CXInterface.h"
+
+/**Base*/
+#import "CXBaseViewController.h"
+#import "CXBaseNavigationController.h"
+#import "CXBaseImageView.h"
+#import "CXBaseLabel.h"
+#import "CXBaseTableView.h"
+#import "CXBaseTableViewCell.h"
+#import "CXBaseView.h"
+#import "CXInsetsField.h"
+#import "CXBaseTextField.h"
+
+/**Tool*/
+#import "CXGetDataTool.h"
+#import "CXProcessDataTool.h"
+#import "CXGlobalTool.h"
+#import "NSDate+CXDate.h"
+
+
+#import "TPKeyboardAvoidingTableView.h"
+#import "TPKeyboardAvoidingScrollView.h"
+
+#define Screen_Width [UIScreen mainScreen].bounds.size.width
+#define Screen_Height [UIScreen mainScreen].bounds.size.height
+
+#define ViewMargin_5 5
+#define ViewMargin_10 10
+#define ViewMargin_Double_10 20
+#define TabBarHeight 49
+#define StatusNavigationBarHeight 64
+#define NavigationBarHeight 44
+#define StatusBarHeight 20
+
+#define ButtonTag 1024
+
+#define WS(weakSelf) __weak __typeof(&*self) weakSelf = self
+
+#define FontSize(x) [UIFont systemFontOfSize:x]
+
+#define ImageWithNamed(s) [UIImage imageNamed:s]
+
+#define AutoSizeScaleX(x) (Screen_Width/375)*x
+
+#define AutoSizeScaleY(y) (Screen_Height/667)*y
+
+#define D_MINUTE	60
+#define D_HOUR		3600
+#define D_DAY		86400
+#define D_WEEK		604800
+#define D_YEAR		31556926
+
+#define DateFormatter_1 @"yyyy-MM-dd HH:mm:ss"
+#define DateFormatter_2 @"MM月dd日 HH:mm"
+#define DateFormatter_3 @"yyyy.MM.dd"
+#define DateFormatter_4 @"yyyy-MM-dd"
+#define DateFormatter_5 @"yyyy-MM-dd HH:mm"
+
+#endif /* FindHouse_pch */
