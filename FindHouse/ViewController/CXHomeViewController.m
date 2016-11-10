@@ -230,7 +230,6 @@ static NSString *marketIdentifier = @"marketIdentifier";
     if (y >= 0)
     {
         self.navigationBarView.backgroundView.alpha = 0.005*y;
-        
     }else
     {
         self.navigationBarView.backgroundView.alpha = 0;
