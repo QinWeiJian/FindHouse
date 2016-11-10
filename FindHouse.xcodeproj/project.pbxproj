@@ -14,6 +14,7 @@
 		6D34357C1DD4478D00EF90E3 /* CXSearchHouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D34357B1DD4478D00EF90E3 /* CXSearchHouseCell.m */; };
 		6D3435801DD45ADA00EF90E3 /* CXOpenCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D34357F1DD45ADA00EF90E3 /* CXOpenCityViewController.m */; };
 		6D3435841DD46D4500EF90E3 /* CXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3435831DD46D4500EF90E3 /* CXLoginViewController.m */; };
+		6D3435881DD4863D00EF90E3 /* CXLoginInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3435871DD4863D00EF90E3 /* CXLoginInputView.m */; };
 		6D3C00461DD023020029A37F /* CXBaseDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3CFFE91DD023020029A37F /* CXBaseDataModel.m */; };
 		6D3C00471DD023020029A37F /* CXBaseImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3CFFEB1DD023020029A37F /* CXBaseImageView.m */; };
 		6D3C00481DD023020029A37F /* CXBaseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3CFFED1DD023020029A37F /* CXBaseLabel.m */; };
@@ -84,6 +85,8 @@
 		6D34357F1DD45ADA00EF90E3 /* CXOpenCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXOpenCityViewController.m; sourceTree = "<group>"; };
 		6D3435821DD46D4500EF90E3 /* CXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXLoginViewController.h; sourceTree = "<group>"; };
 		6D3435831DD46D4500EF90E3 /* CXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXLoginViewController.m; sourceTree = "<group>"; };
+		6D3435861DD4863D00EF90E3 /* CXLoginInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXLoginInputView.h; sourceTree = "<group>"; };
+		6D3435871DD4863D00EF90E3 /* CXLoginInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXLoginInputView.m; sourceTree = "<group>"; };
 		6D3C00001DD023020029A37F /* NSMutableDictionary+CXMutableDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+CXMutableDictionary.m"; sourceTree = "<group>"; };
 		6D3C00011DD023020029A37F /* NSString+CXString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CXString.h"; sourceTree = "<group>"; };
 		6D3C00021DD023020029A37F /* NSString+CXString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CXString.m"; sourceTree = "<group>"; };
@@ -234,10 +237,20 @@
 		6D3435811DD46D2B00EF90E3 /* 登录 */ = {
 			isa = PBXGroup;
 			children = (
+				6D3435851DD485FF00EF90E3 /* View */,
 				6D3435821DD46D4500EF90E3 /* CXLoginViewController.h */,
 				6D3435831DD46D4500EF90E3 /* CXLoginViewController.m */,
 			);
 			name = "登录";
+			sourceTree = "<group>";
+		};
+		6D3435851DD485FF00EF90E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D3435861DD4863D00EF90E3 /* CXLoginInputView.h */,
+				6D3435871DD4863D00EF90E3 /* CXLoginInputView.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		6D3C00091DD023020029A37F /* Public */ = {
@@ -709,6 +722,7 @@
 				6D34357C1DD4478D00EF90E3 /* CXSearchHouseCell.m in Sources */,
 				6D3C00481DD023020029A37F /* CXBaseLabel.m in Sources */,
 				6D3C009C1DD068870029A37F /* CXUpImageFunctionView.m in Sources */,
+				6D3435881DD4863D00EF90E3 /* CXLoginInputView.m in Sources */,
 				6D3C007C1DD02A450029A37F /* CXMessageViewController.m in Sources */,
 				6D3C006D1DD023020029A37F /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				6D3C004C1DD023020029A37F /* CXBaseTableViewCell.m in Sources */,
