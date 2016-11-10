@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		473932BD7CFE8E39B3E7357E /* libPods-FindHouse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F3FF9331631B2039D0CA0F /* libPods-FindHouse.a */; };
+		6D3435741DD4166400EF90E3 /* YYDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3435731DD4166400EF90E3 /* YYDropDownMenu.m */; };
+		6D3435771DD4219600EF90E3 /* YYAreaDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3435761DD4219600EF90E3 /* YYAreaDataModel.m */; };
+		6D3435791DD421DD00EF90E3 /* Area.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6D3435781DD421DD00EF90E3 /* Area.txt */; };
+		6D34357C1DD4478D00EF90E3 /* CXSearchHouseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D34357B1DD4478D00EF90E3 /* CXSearchHouseCell.m */; };
+		6D3435801DD45ADA00EF90E3 /* CXOpenCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D34357F1DD45ADA00EF90E3 /* CXOpenCityViewController.m */; };
+		6D3435841DD46D4500EF90E3 /* CXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3435831DD46D4500EF90E3 /* CXLoginViewController.m */; };
 		6D3C00461DD023020029A37F /* CXBaseDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3CFFE91DD023020029A37F /* CXBaseDataModel.m */; };
 		6D3C00471DD023020029A37F /* CXBaseImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3CFFEB1DD023020029A37F /* CXBaseImageView.m */; };
 		6D3C00481DD023020029A37F /* CXBaseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3CFFED1DD023020029A37F /* CXBaseLabel.m */; };
@@ -67,6 +73,17 @@
 
 /* Begin PBXFileReference section */
 		6C1DA4296E82D2C682861CFD /* Pods-FindHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindHouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindHouse/Pods-FindHouse.debug.xcconfig"; sourceTree = "<group>"; };
+		6D3435721DD4166400EF90E3 /* YYDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDropDownMenu.h; sourceTree = "<group>"; };
+		6D3435731DD4166400EF90E3 /* YYDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDropDownMenu.m; sourceTree = "<group>"; };
+		6D3435751DD4219600EF90E3 /* YYAreaDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAreaDataModel.h; sourceTree = "<group>"; };
+		6D3435761DD4219600EF90E3 /* YYAreaDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAreaDataModel.m; sourceTree = "<group>"; };
+		6D3435781DD421DD00EF90E3 /* Area.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Area.txt; sourceTree = "<group>"; };
+		6D34357A1DD4478D00EF90E3 /* CXSearchHouseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSearchHouseCell.h; sourceTree = "<group>"; };
+		6D34357B1DD4478D00EF90E3 /* CXSearchHouseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSearchHouseCell.m; sourceTree = "<group>"; };
+		6D34357E1DD45ADA00EF90E3 /* CXOpenCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXOpenCityViewController.h; sourceTree = "<group>"; };
+		6D34357F1DD45ADA00EF90E3 /* CXOpenCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXOpenCityViewController.m; sourceTree = "<group>"; };
+		6D3435821DD46D4500EF90E3 /* CXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXLoginViewController.h; sourceTree = "<group>"; };
+		6D3435831DD46D4500EF90E3 /* CXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXLoginViewController.m; sourceTree = "<group>"; };
 		6D3C00001DD023020029A37F /* NSMutableDictionary+CXMutableDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+CXMutableDictionary.m"; sourceTree = "<group>"; };
 		6D3C00011DD023020029A37F /* NSString+CXString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CXString.h"; sourceTree = "<group>"; };
 		6D3C00021DD023020029A37F /* NSString+CXString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CXString.m"; sourceTree = "<group>"; };
@@ -205,9 +222,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6D34357D1DD45A9F00EF90E3 /* 开通城市 */ = {
+			isa = PBXGroup;
+			children = (
+				6D34357E1DD45ADA00EF90E3 /* CXOpenCityViewController.h */,
+				6D34357F1DD45ADA00EF90E3 /* CXOpenCityViewController.m */,
+			);
+			name = "开通城市";
+			sourceTree = "<group>";
+		};
+		6D3435811DD46D2B00EF90E3 /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+				6D3435821DD46D4500EF90E3 /* CXLoginViewController.h */,
+				6D3435831DD46D4500EF90E3 /* CXLoginViewController.m */,
+			);
+			name = "登录";
+			sourceTree = "<group>";
+		};
 		6D3C00091DD023020029A37F /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				6D3435751DD4219600EF90E3 /* YYAreaDataModel.h */,
+				6D3435761DD4219600EF90E3 /* YYAreaDataModel.m */,
+				6D3435721DD4166400EF90E3 /* YYDropDownMenu.h */,
+				6D3435731DD4166400EF90E3 /* YYDropDownMenu.m */,
 				6D3C000A1DD023020029A37F /* CXAddImageSingleView.h */,
 				6D3C000B1DD023020029A37F /* CXAddImageSingleView.m */,
 				6D3C000C1DD023020029A37F /* CXAddImageView.h */,
@@ -291,6 +330,8 @@
 		6D3C006F1DD028120029A37F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6D3435811DD46D2B00EF90E3 /* 登录 */,
+				6D34357D1DD45A9F00EF90E3 /* 开通城市 */,
 				6D3C00B11DD095980029A37F /* 搜索 */,
 				6D3C00761DD02A250029A37F /* 我的 */,
 				6D3C00751DD02A1F0029A37F /* 消息 */,
@@ -410,6 +451,8 @@
 			children = (
 				6D3C00B61DD099E60029A37F /* CXSearchView.h */,
 				6D3C00B71DD099E60029A37F /* CXSearchView.m */,
+				6D34357A1DD4478D00EF90E3 /* CXSearchHouseCell.h */,
+				6D34357B1DD4478D00EF90E3 /* CXSearchHouseCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -452,6 +495,7 @@
 		6D3CFFCE1DD0209C0029A37F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6D3435781DD421DD00EF90E3 /* Area.txt */,
 				6D3CFFDA1DD0209C0029A37F /* Assets.xcassets */,
 				6D3CFFDF1DD0209C0029A37F /* Info.plist */,
 				6D3CFFCF1DD0209C0029A37F /* main.m */,
@@ -578,6 +622,7 @@
 				6D3C00651DD023020029A37F /* GWLPhotoSelector.bundle in Resources */,
 				6D3C005F1DD023020029A37F /* emoticons.plist in Resources */,
 				6D3CFFDB1DD0209C0029A37F /* Assets.xcassets in Resources */,
+				6D3435791DD421DD00EF90E3 /* Area.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,13 +683,16 @@
 			files = (
 				6D3C006B1DD023020029A37F /* TPKeyboardAvoidingScrollView.m in Sources */,
 				6D3C006C1DD023020029A37F /* TPKeyboardAvoidingTableView.m in Sources */,
+				6D3435801DD45ADA00EF90E3 /* CXOpenCityViewController.m in Sources */,
 				6D3C00571DD023020029A37F /* CXAddImageView.m in Sources */,
 				6D3C005A1DD023020029A37F /* CXUserInfoDataModel.m in Sources */,
 				6D3C00791DD02A3E0029A37F /* CXHomeViewController.m in Sources */,
 				6D3C005B1DD023020029A37F /* RunImageScrollView.m in Sources */,
 				6D3C00641DD023020029A37F /* GWLPhotoLibrayController.m in Sources */,
+				6D3435741DD4166400EF90E3 /* YYDropDownMenu.m in Sources */,
 				6D3C00B01DD08ACF0029A37F /* CXMessageNormalCell.m in Sources */,
 				6D3C004E1DD023020029A37F /* CXBaseView.m in Sources */,
+				6D3435771DD4219600EF90E3 /* YYAreaDataModel.m in Sources */,
 				6D3C00561DD023020029A37F /* CXAddImageSingleView.m in Sources */,
 				6D3C00591DD023020029A37F /* CXUser.m in Sources */,
 				6D3C00A21DD0717D0029A37F /* CXHomeMarketView.m in Sources */,
@@ -658,6 +706,7 @@
 				6D3C006A1DD023020029A37F /* JSONKit.m in Sources */,
 				6D3C005E1DD023020029A37F /* YYViewPicturesZoomScrollView.m in Sources */,
 				6D3C00541DD023020029A37F /* UIView+CXView.m in Sources */,
+				6D34357C1DD4478D00EF90E3 /* CXSearchHouseCell.m in Sources */,
 				6D3C00481DD023020029A37F /* CXBaseLabel.m in Sources */,
 				6D3C009C1DD068870029A37F /* CXUpImageFunctionView.m in Sources */,
 				6D3C007C1DD02A450029A37F /* CXMessageViewController.m in Sources */,
@@ -685,6 +734,7 @@
 				6D3C00531DD023020029A37F /* UIImageView+CXWebImageView.m in Sources */,
 				6D3C00891DD05ECD0029A37F /* CXHomeFunctionCell.m in Sources */,
 				6D3C00831DD031B20029A37F /* CXHomeNavigationBarView.m in Sources */,
+				6D3435841DD46D4500EF90E3 /* CXLoginViewController.m in Sources */,
 				6D3C008C1DD05F780029A37F /* CXLeftImageFunctionView.m in Sources */,
 				6D3C00AC1DD081990029A37F /* CXMineNormalCell.m in Sources */,
 				6D3C00491DD023020029A37F /* CXBaseNavigationController.m in Sources */,

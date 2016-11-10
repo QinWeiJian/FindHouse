@@ -41,7 +41,7 @@
     if (!_searchLabel)
     {
         _searchLabel = [[CXBaseLabel alloc] initWithFrame:CGRectMake(self.searchImageView.viewDistanceX+ViewMargin_10, 0, self.viewSizeWidth-self.searchImageView.viewDistanceX-ViewMargin_Double_10, self.viewSizeHeight)];
-        _searchLabel.textColor = CX_GrayColor;
+        _searchLabel.textColor = CX_LightGrayColor;
         _searchLabel.text = @"搜索小区、地段";
     }
     

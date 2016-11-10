@@ -13,6 +13,7 @@
 #import "CXHomeFunctionCell.h"
 #import "CXHomeCityMarketCell.h"
 #import "CXSearchHouseViewController.h"
+#import "CXOpenCityViewController.h"
 
 #define BannerHeight (5*Screen_Width)/9
 
@@ -67,6 +68,10 @@ static NSString *marketIdentifier = @"marketIdentifier";
     if (!_navigationBarView)
     {
         _navigationBarView = [[CXHomeNavigationBarView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, StatusNavigationBarHeight)];
+        
+        UIControl *control = [[UIControl alloc] initWithFrame:_navigationBarView.locateView.frame];
+        [control addTarget:self action:@selector(cityAction) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationBarView addSubview:control];
     }
     
     return _navigationBarView;
@@ -127,7 +132,11 @@ static NSString *marketIdentifier = @"marketIdentifier";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    if (section == 0)
+    {
+        return 1;
+    }
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -230,6 +239,8 @@ static NSString *marketIdentifier = @"marketIdentifier";
     if (y >= 0)
     {
         self.navigationBarView.backgroundView.alpha = 0.005*y;
+        
+        self.navigationBarView.locateView.alpha = 0.5 - 0.005*y;
     }else
     {
         self.navigationBarView.backgroundView.alpha = 0;
@@ -245,6 +256,17 @@ static NSString *marketIdentifier = @"marketIdentifier";
     CXSearchHouseViewController *searchVC = [[CXSearchHouseViewController alloc] init];
     searchVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:searchVC animated:YES];
+}
+
+- (void)cityAction
+{
+    CXOpenCityViewController *cityVC = [[CXOpenCityViewController alloc] init];
+    
+    CXBaseNavigationController *cityNav = [[CXBaseNavigationController alloc] initWithRootViewController:cityVC];
+    
+    [self presentViewController:cityNav animated:YES completion:^{
+        
+    }];
 }
 
 @end

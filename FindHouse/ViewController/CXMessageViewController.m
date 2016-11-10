@@ -8,6 +8,7 @@
 
 #import "CXMessageViewController.h"
 #import "CXMessageNormalCell.h"
+#import "CXLoginViewController.h"
 
 static NSString *cellIdentifier = @"cellIdentifier";
 
@@ -88,6 +89,11 @@ static NSString *cellIdentifier = @"cellIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    CXLoginViewController *loginVC = [[CXLoginViewController alloc] init];
+    [self presentViewController:loginVC animated:YES completion:^{
+        
+    }];
 }
 
 

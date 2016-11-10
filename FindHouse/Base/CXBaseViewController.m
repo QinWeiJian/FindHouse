@@ -37,7 +37,7 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = CX_WhiteColor;
+    self.view.backgroundColor = CX_BackgroundColor;
     self.view.userInteractionEnabled = YES;
     self.navigationItem.backBarButtonItem.title = @"";
     

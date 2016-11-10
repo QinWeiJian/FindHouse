@@ -14,5 +14,17 @@
 		<key>png</key>
 		<string>home_averagePrice</string>
 	</dict>
+	<dict>
+		<key>cht</key>
+		<string>[箭头下]</string>
+		<key>png</key>
+		<string>menu_downArrow</string>
+	</dict>
+	<dict>
+		<key>cht</key>
+		<string>[箭头上]</string>
+		<key>png</key>
+		<string>menu_upArrow</string>
+	</dict>
 </array>
 </plist>
