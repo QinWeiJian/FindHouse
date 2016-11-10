@@ -233,6 +233,8 @@ static NSString *marketIdentifier = @"marketIdentifier";
     }else
     {
         self.navigationBarView.backgroundView.alpha = 0;
+        
+        self.navigationBarView.locateView.alpha = 0.5;
     }
 }
 

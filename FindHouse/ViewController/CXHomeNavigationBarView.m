@@ -44,7 +44,7 @@
 {
     if (!_locateView)
     {
-        _locateView = [[CXBaseView alloc] initWithFrame:CGRectMake(ViewMargin_10, StatusBarHeight+ViewMargin_10, ImageWithNamed(@"navigationBar_location").size.width+50+ViewMargin_10, NavigationBarHeight-ViewMargin_Double_10)];
+        _locateView = [[CXBaseView alloc] initWithFrame:CGRectMake(ViewMargin_10, StatusBarHeight+ViewMargin_10, ImageWithNamed(@"navigationBar_location").size.width+40+ViewMargin_5*3, NavigationBarHeight-ViewMargin_Double_10)];
         _locateView.layer.cornerRadius = _locateView.viewSizeHeight/2;
         _locateView.layer.masksToBounds = YES;
         _locateView.backgroundColor = [UIColor blackColor];
@@ -58,7 +58,7 @@
 {
     if (!_locateImageView)
     {
-        _locateImageView = [[CXBaseImageView alloc] initWithFrame:CGRectMake(ViewMargin_Double_10, StatusBarHeight+ViewMargin_10, ImageWithNamed(@"navigationBar_location").size.width, self.locateView.viewSizeHeight)];
+        _locateImageView = [[CXBaseImageView alloc] initWithFrame:CGRectMake(ViewMargin_10+ViewMargin_5, StatusBarHeight+ViewMargin_10, ImageWithNamed(@"navigationBar_location").size.width, self.locateView.viewSizeHeight)];
         _locateImageView.image = ImageWithNamed(@"navigationBar_location");
     }
     
@@ -69,9 +69,10 @@
 {
     if (!_locateLabel)
     {
-        _locateLabel = [[CXBaseLabel alloc] initWithFrame:CGRectMake(self.locateImageView.viewDistanceX+ViewMargin_5, self.locateImageView.viewOriginY, 50, self.locateView.viewSizeHeight)];
+        _locateLabel = [[CXBaseLabel alloc] initWithFrame:CGRectMake(self.locateImageView.viewDistanceX+ViewMargin_5, self.locateImageView.viewOriginY, 40, self.locateView.viewSizeHeight)];
         _locateLabel.textColor = CX_WhiteColor;
         _locateLabel.text = @"广州";
+//        _locateLabel.textAlignment = 1;
     }
     
     return _locateLabel;
