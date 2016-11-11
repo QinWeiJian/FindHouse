@@ -36,9 +36,9 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.bgView];
+    [self.view addSubview:self.backButton];
     
     [self.bgView addSubview:self.headImageView];
-    [self.bgView addSubview:self.backButton];
     [self.bgView addSubview:self.phoneView];
     [self.bgView addSubview:self.verifyCodeView];
     [self.bgView addSubview:self.protocolLabel];

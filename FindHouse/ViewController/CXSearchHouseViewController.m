@@ -11,6 +11,7 @@
 #import "YYDropDownMenu.h"
 #import "YYAreaDataModel.h"
 #import "CXSearchHouseCell.h"
+#import "CXHouseDetailViewController.h"
 
 #define CellImageHeight (5*Screen_Width)/9
 
@@ -560,6 +561,9 @@ static NSString *cellIdentifier = @"cellIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    CXHouseDetailViewController *detailVC = [[CXHouseDetailViewController alloc] init];
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 @end
