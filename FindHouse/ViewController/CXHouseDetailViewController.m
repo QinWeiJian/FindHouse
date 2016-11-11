@@ -10,12 +10,14 @@
 #import "RunImageScrollView.h"
 #import "CXHouseMessageCell.h"
 #import "CXHouseVerifyHeaderView.h"
+#import "CXHouseCommentCell.h"
 
 #define BottomBarHeight 50
 
 #define BannerHeight (5*Screen_Width)/9
 
 static NSString *houseMessageCellIdentifier = @"houseMessageCellIdentifier";
+static NSString *houseCommentCellIdentifier = @"houseCommentCellIdentifier";
 static NSString *normalCellIdentifier = @"normalCellIdentifier";
 
 @interface CXHouseDetailViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -198,6 +200,7 @@ static NSString *normalCellIdentifier = @"normalCellIdentifier";
         _myTableView.dataSource = self;
         
         [_myTableView registerClass:[CXHouseMessageCell class] forCellReuseIdentifier:houseMessageCellIdentifier];
+        [_myTableView registerClass:[CXHouseCommentCell class] forCellReuseIdentifier:houseCommentCellIdentifier];
         [_myTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:normalCellIdentifier];
     }
     
@@ -230,6 +233,10 @@ static NSString *normalCellIdentifier = @"normalCellIdentifier";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (section == 1)
+    {
+        return 2;
+    }
     return 1;
 }
 
@@ -238,6 +245,11 @@ static NSString *normalCellIdentifier = @"normalCellIdentifier";
     if (indexPath.section == 0)
     {
         CXHouseMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:houseMessageCellIdentifier];
+        
+        return cell;
+    }else if (indexPath.section == 1)
+    {
+        CXHouseCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:houseCommentCellIdentifier];
         
         return cell;
     }
@@ -257,6 +269,9 @@ static NSString *normalCellIdentifier = @"normalCellIdentifier";
     if (indexPath.section == 0)
     {
         return 220;
+    }else if (indexPath.section == 1)
+    {
+        return 160;
     }
     return 70;
 }

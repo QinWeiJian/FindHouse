@@ -10,4 +10,9 @@
 
 @interface CXHouseCommentCell : CXBaseTableViewCell
 
+@property(nonatomic,retain)CXBaseImageView *headImageView;
+@property(nonatomic,retain)CXBaseLabel *nameLabel;
+@property(nonatomic,retain)CXBaseLabel *contentLabel;
+@property(nonatomic,retain)UIView *lineView;
+
 @end
