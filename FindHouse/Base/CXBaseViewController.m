@@ -18,7 +18,7 @@
 {
     [super viewWillAppear:animated];
     
-    //    [self.navigationController setNavigationBarHidden:NO animated:YES];
+//    [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
     self.navigationController.delegate = self;
     if (self.navigationController.viewControllers.count == 1) {

@@ -9,6 +9,8 @@
 #import "CXMineViewController.h"
 #import "CXMineHeaderView.h"
 #import "CXMineNormalCell.h"
+#import "CXFeedBackViewController.h"
+#import "CXSettingViewController.h"
 
 #define BannerHeight (5*Screen_Width)/9
 
@@ -143,6 +145,21 @@ static NSString *cellIdentifier = @"cellIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.section == 1)
+    {
+        if (indexPath.row == 1)
+        {
+            CXFeedBackViewController *feedVC = [[CXFeedBackViewController alloc] init];
+            feedVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:feedVC animated:YES];
+        }else if (indexPath.row == 2)
+        {
+            CXSettingViewController *setVC = [[CXSettingViewController alloc] init];
+            setVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:setVC animated:YES];
+        }
+    }
 }
 
 @end

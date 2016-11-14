@@ -11,6 +11,7 @@
 #import "CXHouseMessageCell.h"
 #import "CXHouseVerifyHeaderView.h"
 #import "CXHouseCommentCell.h"
+#import "CXHouseListCell.h"
 
 #define BottomBarHeight 50
 
@@ -19,6 +20,7 @@
 static NSString *houseMessageCellIdentifier = @"houseMessageCellIdentifier";
 static NSString *houseCommentCellIdentifier = @"houseCommentCellIdentifier";
 static NSString *normalCellIdentifier = @"normalCellIdentifier";
+static NSString *houseListCellIdentifier = @"houseListCellIdentifier";
 
 @interface CXHouseDetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -36,6 +38,8 @@ static NSString *normalCellIdentifier = @"normalCellIdentifier";
 @property(nonatomic,retain)RunImageScrollView *bannerView;
 
 @property(nonatomic,retain)CXHouseVerifyHeaderView *houseVerifyHeaderView;
+@property(nonatomic,retain)CXInsetsField *mapHeaderView;
+@property(nonatomic,retain)CXInsetsField *moreHeaderView;
 
 @end
 
@@ -201,6 +205,7 @@ static NSString *normalCellIdentifier = @"normalCellIdentifier";
         
         [_myTableView registerClass:[CXHouseMessageCell class] forCellReuseIdentifier:houseMessageCellIdentifier];
         [_myTableView registerClass:[CXHouseCommentCell class] forCellReuseIdentifier:houseCommentCellIdentifier];
+        [_myTableView registerClass:[CXHouseListCell class] forCellReuseIdentifier:houseListCellIdentifier];
         [_myTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:normalCellIdentifier];
     }
     
@@ -229,6 +234,34 @@ static NSString *normalCellIdentifier = @"normalCellIdentifier";
     return _houseVerifyHeaderView;
 }
 
+- (CXInsetsField *)mapHeaderView
+{
+    if (!_mapHeaderView)
+    {
+        _mapHeaderView = [[CXInsetsField alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 40) margin:ViewMargin_10];
+        _mapHeaderView.enabled = NO;
+        _mapHeaderView.textColor = CX_ThemeGreenColor;
+        _mapHeaderView.backgroundColor = CX_WhiteColor;
+        _mapHeaderView.text = @"地图";
+    }
+    
+    return _mapHeaderView;
+}
+
+- (CXInsetsField *)moreHeaderView
+{
+    if (!_moreHeaderView)
+    {
+        _moreHeaderView = [[CXInsetsField alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 40) margin:ViewMargin_10];
+        _moreHeaderView.enabled = NO;
+        _moreHeaderView.textColor = CX_ThemeGreenColor;
+        _moreHeaderView.backgroundColor = CX_WhiteColor;
+        _moreHeaderView.text = @"更多推荐";
+    }
+    
+    return _moreHeaderView;
+}
+
 #pragma mark - UITableView Delegate && DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -236,6 +269,9 @@ static NSString *normalCellIdentifier = @"normalCellIdentifier";
     if (section == 1)
     {
         return 2;
+    }else if (section == 3)
+    {
+        return 5;
     }
     return 1;
 }
@@ -252,6 +288,11 @@ static NSString *normalCellIdentifier = @"normalCellIdentifier";
         CXHouseCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:houseCommentCellIdentifier];
         
         return cell;
+    }else if (indexPath.section == 3)
+    {
+        CXHouseListCell *cell = [tableView dequeueReusableCellWithIdentifier:houseListCellIdentifier];
+        
+        return cell;
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:normalCellIdentifier];
@@ -261,7 +302,7 @@ static NSString *normalCellIdentifier = @"normalCellIdentifier";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 5;
+    return 4;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -272,8 +313,11 @@ static NSString *normalCellIdentifier = @"normalCellIdentifier";
     }else if (indexPath.section == 1)
     {
         return 160;
+    }else if (indexPath.section == 2)
+    {
+        return BannerHeight;
     }
-    return 70;
+    return 100;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -284,6 +328,12 @@ static NSString *normalCellIdentifier = @"normalCellIdentifier";
     }else if (section == 1)
     {
         return self.houseVerifyHeaderView.viewSizeHeight;
+    }else if (section == 2)
+    {
+        return self.mapHeaderView.viewSizeHeight;
+    }else if (section == 3)
+    {
+        return self.moreHeaderView.viewSizeHeight;
     }
     return 0.1;
 }
@@ -301,6 +351,12 @@ static NSString *normalCellIdentifier = @"normalCellIdentifier";
     }else if (section == 1)
     {
         return self.houseVerifyHeaderView;
+    }else if (section == 2)
+    {
+        return self.mapHeaderView;
+    }else if (section == 3)
+    {
+        return self.moreHeaderView;
     }
     
     return nil;

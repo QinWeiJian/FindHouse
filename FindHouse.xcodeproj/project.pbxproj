@@ -70,6 +70,12 @@
 		6D3CFFD01DD0209C0029A37F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3CFFCF1DD0209C0029A37F /* main.m */; };
 		6D3CFFD31DD0209C0029A37F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3CFFD21DD0209C0029A37F /* AppDelegate.m */; };
 		6D3CFFDB1DD0209C0029A37F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D3CFFDA1DD0209C0029A37F /* Assets.xcassets */; };
+		6D727F951DD96A3C00B2E856 /* CXHouseListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D727F941DD96A3C00B2E856 /* CXHouseListCell.m */; };
+		6D727F981DD995BB00B2E856 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D727F971DD995BB00B2E856 /* UIPlaceHolderTextView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6D727F9C1DD995F500B2E856 /* CXFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D727F9B1DD995F500B2E856 /* CXFeedBackViewController.m */; };
+		6D727FA01DD99CD300B2E856 /* CXSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D727F9F1DD99CD300B2E856 /* CXSettingViewController.m */; };
+		6D727FA41DD99DD800B2E856 /* CXDetailLabelCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D727FA31DD99DD800B2E856 /* CXDetailLabelCellView.m */; };
+		6D727FA71DD99DE600B2E856 /* CXSwitchCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D727FA61DD99DE600B2E856 /* CXSwitchCellView.m */; };
 		6D8CEC061DD56CCC0048F800 /* CXHouseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CEC051DD56CCC0048F800 /* CXHouseDetailViewController.m */; };
 		6D8CEC0A1DD5A89C0048F800 /* CXHouseMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CEC091DD5A89C0048F800 /* CXHouseMessageCell.m */; };
 		6D8CEC0D1DD5BBEA0048F800 /* CXHouseTapLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CEC0C1DD5BBEA0048F800 /* CXHouseTapLabel.m */; };
@@ -206,6 +212,18 @@
 		6D3CFFFD1DD023020029A37F /* NSDate+CXDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CXDate.h"; sourceTree = "<group>"; };
 		6D3CFFFE1DD023020029A37F /* NSDate+CXDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CXDate.m"; sourceTree = "<group>"; };
 		6D3CFFFF1DD023020029A37F /* NSMutableDictionary+CXMutableDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+CXMutableDictionary.h"; sourceTree = "<group>"; };
+		6D727F931DD96A3C00B2E856 /* CXHouseListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHouseListCell.h; sourceTree = "<group>"; };
+		6D727F941DD96A3C00B2E856 /* CXHouseListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHouseListCell.m; sourceTree = "<group>"; };
+		6D727F961DD995BB00B2E856 /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
+		6D727F971DD995BB00B2E856 /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
+		6D727F9A1DD995F500B2E856 /* CXFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXFeedBackViewController.h; sourceTree = "<group>"; };
+		6D727F9B1DD995F500B2E856 /* CXFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXFeedBackViewController.m; sourceTree = "<group>"; };
+		6D727F9E1DD99CD300B2E856 /* CXSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSettingViewController.h; sourceTree = "<group>"; };
+		6D727F9F1DD99CD300B2E856 /* CXSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSettingViewController.m; sourceTree = "<group>"; };
+		6D727FA21DD99DD800B2E856 /* CXDetailLabelCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDetailLabelCellView.h; sourceTree = "<group>"; };
+		6D727FA31DD99DD800B2E856 /* CXDetailLabelCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDetailLabelCellView.m; sourceTree = "<group>"; };
+		6D727FA51DD99DE600B2E856 /* CXSwitchCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSwitchCellView.h; sourceTree = "<group>"; };
+		6D727FA61DD99DE600B2E856 /* CXSwitchCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSwitchCellView.m; sourceTree = "<group>"; };
 		6D8CEC041DD56CCC0048F800 /* CXHouseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHouseDetailViewController.h; sourceTree = "<group>"; };
 		6D8CEC051DD56CCC0048F800 /* CXHouseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHouseDetailViewController.m; sourceTree = "<group>"; };
 		6D8CEC081DD5A89C0048F800 /* CXHouseMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHouseMessageCell.h; sourceTree = "<group>"; };
@@ -271,6 +289,8 @@
 		6D3C00091DD023020029A37F /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				6D727F961DD995BB00B2E856 /* UIPlaceHolderTextView.h */,
+				6D727F971DD995BB00B2E856 /* UIPlaceHolderTextView.m */,
 				6D3435751DD4219600EF90E3 /* YYAreaDataModel.h */,
 				6D3435761DD4219600EF90E3 /* YYAreaDataModel.m */,
 				6D3435721DD4166400EF90E3 /* YYDropDownMenu.h */,
@@ -358,6 +378,8 @@
 		6D3C006F1DD028120029A37F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6D727F9D1DD99CC800B2E856 /* 设置 */,
+				6D727F991DD995E500B2E856 /* 意见反馈 */,
 				6D8CEC031DD569890048F800 /* 房源详情 */,
 				6D3435811DD46D2B00EF90E3 /* 登录 */,
 				6D34357D1DD45A9F00EF90E3 /* 开通城市 */,
@@ -576,6 +598,36 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		6D727F991DD995E500B2E856 /* 意见反馈 */ = {
+			isa = PBXGroup;
+			children = (
+				6D727F9A1DD995F500B2E856 /* CXFeedBackViewController.h */,
+				6D727F9B1DD995F500B2E856 /* CXFeedBackViewController.m */,
+			);
+			name = "意见反馈";
+			sourceTree = "<group>";
+		};
+		6D727F9D1DD99CC800B2E856 /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				6D727FA11DD99DB100B2E856 /* View */,
+				6D727F9E1DD99CD300B2E856 /* CXSettingViewController.h */,
+				6D727F9F1DD99CD300B2E856 /* CXSettingViewController.m */,
+			);
+			name = "设置";
+			sourceTree = "<group>";
+		};
+		6D727FA11DD99DB100B2E856 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D727FA21DD99DD800B2E856 /* CXDetailLabelCellView.h */,
+				6D727FA31DD99DD800B2E856 /* CXDetailLabelCellView.m */,
+				6D727FA51DD99DE600B2E856 /* CXSwitchCellView.h */,
+				6D727FA61DD99DE600B2E856 /* CXSwitchCellView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		6D8CEC031DD569890048F800 /* 房源详情 */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +649,8 @@
 				6D8CEC0F1DD5C9A70048F800 /* CXHouseVerifyHeaderView.m */,
 				6D8CEC111DD5D3340048F800 /* CXHouseCommentCell.h */,
 				6D8CEC121DD5D3350048F800 /* CXHouseCommentCell.m */,
+				6D727F931DD96A3C00B2E856 /* CXHouseListCell.h */,
+				6D727F941DD96A3C00B2E856 /* CXHouseListCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -745,9 +799,12 @@
 				6D3C005B1DD023020029A37F /* RunImageScrollView.m in Sources */,
 				6D3C00641DD023020029A37F /* GWLPhotoLibrayController.m in Sources */,
 				6D3435741DD4166400EF90E3 /* YYDropDownMenu.m in Sources */,
+				6D727FA71DD99DE600B2E856 /* CXSwitchCellView.m in Sources */,
+				6D727F9C1DD995F500B2E856 /* CXFeedBackViewController.m in Sources */,
 				6D3C00B01DD08ACF0029A37F /* CXMessageNormalCell.m in Sources */,
 				6D3C004E1DD023020029A37F /* CXBaseView.m in Sources */,
 				6D3435771DD4219600EF90E3 /* YYAreaDataModel.m in Sources */,
+				6D727FA01DD99CD300B2E856 /* CXSettingViewController.m in Sources */,
 				6D3C00561DD023020029A37F /* CXAddImageSingleView.m in Sources */,
 				6D3C00591DD023020029A37F /* CXUser.m in Sources */,
 				6D3C00A21DD0717D0029A37F /* CXHomeMarketView.m in Sources */,
@@ -767,6 +824,7 @@
 				6D3435881DD4863D00EF90E3 /* CXLoginInputView.m in Sources */,
 				6D3C007C1DD02A450029A37F /* CXMessageViewController.m in Sources */,
 				6D3C006D1DD023020029A37F /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				6D727F981DD995BB00B2E856 /* UIPlaceHolderTextView.m in Sources */,
 				6D3C004C1DD023020029A37F /* CXBaseTableViewCell.m in Sources */,
 				6D3C004D1DD023020029A37F /* CXBaseTextField.m in Sources */,
 				6D3C00731DD029340029A37F /* CXRootViewController.m in Sources */,
@@ -774,10 +832,12 @@
 				6D3C00511DD023020029A37F /* NSMutableDictionary+CXMutableDictionary.m in Sources */,
 				6D3C009F1DD06F850029A37F /* CXHomeCityMarketCell.m in Sources */,
 				6D3C00581DD023020029A37F /* CXInsetsField.m in Sources */,
+				6D727F951DD96A3C00B2E856 /* CXHouseListCell.m in Sources */,
 				6D3C00991DD066260029A37F /* CXProcessDataTool.m in Sources */,
 				6D8CEC0A1DD5A89C0048F800 /* CXHouseMessageCell.m in Sources */,
 				6D3C00501DD023020029A37F /* NSDate+CXDate.m in Sources */,
 				6D3C00861DD05A710029A37F /* CXHomeSearchView.m in Sources */,
+				6D727FA41DD99DD800B2E856 /* CXDetailLabelCellView.m in Sources */,
 				6D3C00461DD023020029A37F /* CXBaseDataModel.m in Sources */,
 				6D3C00621DD023020029A37F /* GWLPhotoGroupDetailController.m in Sources */,
 				6D3C00B41DD095A80029A37F /* CXSearchHouseViewController.m in Sources */,
