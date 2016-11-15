@@ -10,6 +10,8 @@
 #import "CXLeftImageFunctionView.h"
 #import "CXUpImageFunctionView.h"
 
+typedef void(^CXHomeFunctionCellDidSelectedBlock)(NSInteger);
+
 @interface CXHomeFunctionCell : CXBaseTableViewCell
 
 @property(nonatomic,retain)CXLeftImageFunctionView *buyHouseView;
@@ -18,5 +20,7 @@
 @property(nonatomic,retain)CXUpImageFunctionView *tradeView;
 @property(nonatomic,retain)CXUpImageFunctionView *secretaryView;
 @property(nonatomic,retain)CXUpImageFunctionView *calculatorView;
+
+@property(nonatomic,copy)CXHomeFunctionCellDidSelectedBlock didSelectedBlock;
 
 @end

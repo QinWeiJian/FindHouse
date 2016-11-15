@@ -14,6 +14,7 @@
 #import "CXHomeCityMarketCell.h"
 #import "CXSearchHouseViewController.h"
 #import "CXOpenCityViewController.h"
+#import "CXCalculatorViewController.h"
 
 #define BannerHeight (5*Screen_Width)/9
 
@@ -145,6 +146,12 @@ static NSString *marketIdentifier = @"marketIdentifier";
     {
         CXHomeFunctionCell *cell = [tableView dequeueReusableCellWithIdentifier:functionIdentifier];
         
+        WS(weakSelf);
+        
+        cell.didSelectedBlock = ^(NSInteger index){
+            [weakSelf functionDidSelected:index];
+        };
+        
         return cell;
     }
     
@@ -267,6 +274,49 @@ static NSString *marketIdentifier = @"marketIdentifier";
     [self presentViewController:cityNav animated:YES completion:^{
         
     }];
+}
+
+#pragma mark - Private Method
+
+- (void)functionDidSelected:(NSInteger)index
+{
+    switch (index)
+    {
+        case 0:
+        {
+            
+        }
+            break;
+            
+        case 1:
+        {
+            
+        }
+            break;
+            
+        case 2:
+        {
+            
+        }
+            break;
+            
+        case 3:
+        {
+            
+        }
+            break;
+            
+        case 4:
+        {
+            CXCalculatorViewController *calculatorVC = [[CXCalculatorViewController alloc] init];
+            calculatorVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:calculatorVC animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 @end

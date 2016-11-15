@@ -36,6 +36,8 @@
     if (!_buyHouseView)
     {
         _buyHouseView = [[CXLeftImageFunctionView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width/2, 100) image:ImageWithNamed(@"home_buyHouse") text:@"买房"];
+        _buyHouseView.tag = ButtonTag;
+        [_buyHouseView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(functionAction:)]];
     }
     
     return _buyHouseView;
@@ -46,6 +48,8 @@
     if (!_saleHouseView)
     {
         _saleHouseView = [[CXLeftImageFunctionView alloc] initWithFrame:CGRectMake(Screen_Width/2, 0, Screen_Width/2, 100) image:ImageWithNamed(@"home_saleHouse") text:@"卖房"];
+        _saleHouseView.tag = ButtonTag+1;
+        [_saleHouseView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(functionAction:)]];
     }
     
     return _saleHouseView;
@@ -56,6 +60,8 @@
     if (!_tradeView)
     {
         _tradeView = [[CXUpImageFunctionView alloc] initWithFrame:CGRectMake(0, 100, Screen_Width/3, 100) image:ImageWithNamed(@"home_trade") text:@"交易服务"];
+        _tradeView.tag = ButtonTag+2;
+        [_tradeView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(functionAction:)]];
     }
     
     return _tradeView;
@@ -66,6 +72,8 @@
     if (!_secretaryView)
     {
         _secretaryView = [[CXUpImageFunctionView alloc] initWithFrame:CGRectMake(self.tradeView.viewDistanceX, self.tradeView.viewOriginY, self.tradeView.viewSizeWidth, self.tradeView.viewSizeHeight) image:ImageWithNamed(@"home_secretary") text:@"房小蜜"];
+        _secretaryView.tag = ButtonTag+3;
+        [_secretaryView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(functionAction:)]];
     }
     
     return _secretaryView;
@@ -76,9 +84,23 @@
     if (!_calculatorView)
     {
         _calculatorView = [[CXUpImageFunctionView alloc] initWithFrame:CGRectMake(self.secretaryView.viewDistanceX, self.tradeView.viewOriginY, self.tradeView.viewSizeWidth, self.tradeView.viewSizeHeight) image:ImageWithNamed(@"home_calculator") text:@"计算器"];
+        _calculatorView.tag = ButtonTag+4;
+        [_calculatorView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(functionAction:)]];
     }
     
     return _calculatorView;
+}
+
+#pragma mark - Action
+
+- (void)functionAction:(UIGestureRecognizer *)sender
+{
+    NSInteger index = sender.view.tag -  ButtonTag;
+    
+    if (self.didSelectedBlock)
+    {
+        self.didSelectedBlock(index);
+    }
 }
 
 @end
