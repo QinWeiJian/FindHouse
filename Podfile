@@ -10,7 +10,7 @@ target “FindHouse” do
 
     pod 'MBProgressHUD', '~> 0.9.1'
 
-    pod 'MJRefresh', '~> 3.0.7'
+    pod 'MJRefresh'
 
     pod 'NJKWebViewProgress'
         

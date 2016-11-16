@@ -113,6 +113,7 @@
         _myTableView0.tag = ButtonTag+0;
         _myTableView0.showsVerticalScrollIndicator = YES;
         _myTableView0.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        _myTableView0.backgroundColor = CX_WhiteColor;
         _myTableView0.dataSource = self;
         _myTableView0.delegate = self;
         _myTableView0.hidden = YES;
@@ -306,7 +307,6 @@
     {
         case 1:
         {
-            
             CGFloat footerHeight = [self.dataSource yy_dropDownMenu:self heightForFooterInCategory:self.currentSelectedIndex section:0];
                         
             NSInteger row = [self.dataSource yy_dropDownMenu:self numberOfRowInCategory:self.currentSelectedIndex section:0];
@@ -322,6 +322,7 @@
             self.myTableView2.frame = CGRectZero;
             
             [UIView animateWithDuration:0.2 animations:^{
+
                 weakSelf.myTableView0.frame = CGRectMake(0, weakSelf.categoryHeight, Screen_Width/colunm, tableviewHeight);
                 weakSelf.myTableView1.frame = CGRectZero;
                 weakSelf.myTableView2.frame = CGRectZero;

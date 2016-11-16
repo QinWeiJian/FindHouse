@@ -49,9 +49,9 @@
         _priceLabel.textColor = CX_OrangeColor;
         _priceLabel.font = FontSize(16);
         _priceLabel.textAlignment = 2;
-        _priceLabel.text = @"0-5000元";
+        _priceLabel.text = @"0-5000元/月";
         
-        _priceLabel.attributedText = [@"0-5000元/月" cx_changeTextColorWithReplaceString:@"元/月" ChangeColor:CX_GrayColor ChangeFont:FontSize(12)];
+        _priceLabel.attributedText = [_priceLabel.text cx_changeTextColorWithReplaceString:@"元/月" ChangeColor:CX_GrayColor ChangeFont:FontSize(12)];
     }
     
     return _priceLabel;
@@ -99,8 +99,6 @@
     NSInteger maxValue = slider.rightValue*5000;
     
     NSString *string = [NSString stringWithFormat:@"%ld-%ld元/月",(long)minValue,(long)maxValue];
-    
-    _priceLabel.text = [NSString stringWithFormat:@"%ld-%ld元",(long)minValue,(long)maxValue];
     
     _priceLabel.attributedText = [string cx_changeTextColorWithReplaceString:@"元/月" ChangeColor:CX_GrayColor ChangeFont:FontSize(12)];
 }
