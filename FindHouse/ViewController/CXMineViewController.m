@@ -11,6 +11,7 @@
 #import "CXMineNormalCell.h"
 #import "CXFeedBackViewController.h"
 #import "CXSettingViewController.h"
+#import "CXMyCollectionViewController.h"
 
 #define BannerHeight (5*Screen_Width)/9
 
@@ -158,6 +159,14 @@ static NSString *cellIdentifier = @"cellIdentifier";
             CXSettingViewController *setVC = [[CXSettingViewController alloc] init];
             setVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:setVC animated:YES];
+        }
+    }else
+    {
+        if (indexPath.row == 0)
+        {
+            CXMyCollectionViewController *collectionVC = [[CXMyCollectionViewController alloc] init];
+            collectionVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:collectionVC animated:YES];
         }
     }
 }

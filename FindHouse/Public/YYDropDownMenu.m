@@ -64,9 +64,10 @@
         UIButton *category = [[UIButton alloc] initWithFrame:CGRectMake(i*categoryWidth, 0, categoryWidth, self.viewSizeHeight)];
         category.titleLabel.font = FontSize(14);
         category.tag = ButtonTag+i;
+        category.backgroundColor = CX_WhiteColor;
         category.titleLabel.lineBreakMode = NSLineBreakByTruncatingMiddle;
         [category setAttributedTitle:[CXGlobalTool cx_emotionStrWithString:[NSString stringWithFormat:@"%@ [箭头下]",[self.dataSource yy_dropDownMenu:self titleForCategory:i]] textColor:CX_BlackColor offset:2] forState:UIControlStateNormal];
-        [category setAttributedTitle:[CXGlobalTool cx_emotionStrWithString:[NSString stringWithFormat:@"%@ [箭头上]",[self.dataSource yy_dropDownMenu:self titleForCategory:i]] textColor:CX_BlackColor offset:2] forState:UIControlStateSelected];
+        [category setAttributedTitle:[CXGlobalTool cx_emotionStrWithString:[NSString stringWithFormat:@"%@ [箭头上]",[self.dataSource yy_dropDownMenu:self titleForCategory:i]] textColor:CX_ThemeGreenColor offset:2] forState:UIControlStateSelected];
         [category addTarget:self action:@selector(categoryAction:) forControlEvents:UIControlEventTouchUpInside];
         
         [self.categoryArray addObject:category];
@@ -111,6 +112,7 @@
         _myTableView0 = [[CXBaseTableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         _myTableView0.tag = ButtonTag+0;
         _myTableView0.showsVerticalScrollIndicator = YES;
+        _myTableView0.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         _myTableView0.dataSource = self;
         _myTableView0.delegate = self;
         _myTableView0.hidden = YES;
@@ -126,6 +128,7 @@
         _myTableView1 = [[CXBaseTableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         _myTableView1.tag = ButtonTag+1;
         _myTableView1.showsVerticalScrollIndicator = YES;
+        _myTableView1.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         _myTableView1.backgroundColor = CX_WhiteColor;
         _myTableView1.dataSource = self;
         _myTableView1.delegate = self;
@@ -142,6 +145,7 @@
         _myTableView2 = [[CXBaseTableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         _myTableView2.tag = ButtonTag+2;
         _myTableView2.showsVerticalScrollIndicator = YES;
+        _myTableView2.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         _myTableView2.backgroundColor = CX_WhiteColor;
         _myTableView2.dataSource = self;
         _myTableView2.delegate = self;
@@ -205,7 +209,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 0.1;
+    return [self.dataSource yy_dropDownMenu:self heightForFooterInCategory:self.currentSelectedIndex section:tableView.tag - ButtonTag];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return [self.dataSource yy_dropDownMenu:self viewForFooterInCategory:self.currentSelectedIndex section:tableView.tag - ButtonTag];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -286,12 +295,10 @@
         [self.delegate yy_dropDownMenu:self didSelectCategory:self.currentSelectedIndex];
     }
     
-    [self reloadData];
-    
     NSInteger colunm = [self.dataSource yy_dropDownMenu:self numberOfColumnsInCategory:self.currentSelectedIndex];
     
-    self.frame = CGRectMake(self.viewOriginX, self.viewOriginY, self.viewSizeWidth, Screen_Height-StatusNavigationBarHeight);
-    self.bgControl.frame = CGRectMake(0, self.categoryHeight, self.viewSizeWidth, Screen_Height-self.categoryHeight-StatusNavigationBarHeight);
+    self.frame = CGRectMake(self.viewOriginX, self.viewOriginY, Screen_Width, Screen_Height-StatusNavigationBarHeight);
+    self.bgControl.frame = CGRectMake(0, self.categoryHeight, Screen_Width, Screen_Height-self.categoryHeight-StatusNavigationBarHeight);
     
     WS(weakSelf);
     
@@ -299,22 +306,23 @@
     {
         case 1:
         {
+            
+            CGFloat footerHeight = [self.dataSource yy_dropDownMenu:self heightForFooterInCategory:self.currentSelectedIndex section:0];
+                        
             NSInteger row = [self.dataSource yy_dropDownMenu:self numberOfRowInCategory:self.currentSelectedIndex section:0];
             
-            CGFloat tableviewHeight = row*RowHeight > (Screen_Height-self.categoryHeight-StatusNavigationBarHeight) ? (Screen_Height-self.categoryHeight-StatusNavigationBarHeight) : row*RowHeight;
+            CGFloat tableviewHeight = row*RowHeight+footerHeight > (Screen_Height-self.categoryHeight-StatusNavigationBarHeight) ? (Screen_Height-self.categoryHeight-StatusNavigationBarHeight) : row*RowHeight+footerHeight;
             
             self.myTableView0.hidden = NO;
             self.myTableView1.hidden = YES;
             self.myTableView2.hidden = YES;
             
-            self.myTableView0.backgroundColor = CX_WhiteColor;
-            
-            self.myTableView0.frame = CGRectMake(0, self.categoryHeight, self.viewSizeWidth/colunm, 0);
+            self.myTableView0.frame = CGRectMake(0, self.categoryHeight, Screen_Width/colunm, 0);
             self.myTableView1.frame = CGRectZero;
             self.myTableView2.frame = CGRectZero;
             
             [UIView animateWithDuration:0.2 animations:^{
-                weakSelf.myTableView0.frame = CGRectMake(0, weakSelf.categoryHeight, weakSelf.viewSizeWidth/colunm, tableviewHeight);
+                weakSelf.myTableView0.frame = CGRectMake(0, weakSelf.categoryHeight, Screen_Width/colunm, tableviewHeight);
                 weakSelf.myTableView1.frame = CGRectZero;
                 weakSelf.myTableView2.frame = CGRectZero;
                 
@@ -329,15 +337,12 @@
             self.myTableView1.hidden = NO;
             self.myTableView2.hidden = YES;
             
-            self.myTableView0.backgroundColor = CX_BackgroundColor;
-            self.myTableView1.backgroundColor = CX_WhiteColor;
-            
-            self.myTableView0.frame = CGRectMake(0, self.categoryHeight, self.viewSizeWidth/colunm, 0);
+            self.myTableView0.frame = CGRectMake(0, self.categoryHeight, Screen_Width/colunm, 0);
             self.myTableView1.frame = CGRectMake(self.myTableView0.viewDistanceX, self.myTableView0.viewOriginY, self.myTableView0.viewSizeWidth, self.myTableView0.viewSizeHeight);
             self.myTableView2.frame = CGRectZero;
             
             [UIView animateWithDuration:0.2 animations:^{
-                weakSelf.myTableView0.frame = CGRectMake(0, weakSelf.categoryHeight, weakSelf.viewSizeWidth/colunm, Screen_Height-weakSelf.categoryHeight-StatusNavigationBarHeight);
+                weakSelf.myTableView0.frame = CGRectMake(0, weakSelf.categoryHeight, Screen_Width/colunm, Screen_Height-weakSelf.categoryHeight-StatusNavigationBarHeight);
                 weakSelf.myTableView1.frame = CGRectMake(weakSelf.myTableView0.viewDistanceX, weakSelf.myTableView0.viewOriginY, weakSelf.myTableView0.viewSizeWidth, self.myTableView0.viewSizeHeight);
                 weakSelf.myTableView2.frame = CGRectZero;
                 
@@ -352,17 +357,12 @@
             self.myTableView1.hidden = NO;
             self.myTableView2.hidden = NO;
             
-            self.myTableView0.backgroundColor = CX_BackgroundColor;
-            self.myTableView1.backgroundColor = CX_WhiteColor;
-            self.myTableView2.backgroundColor = CX_WhiteColor;
-            
-            
-            self.myTableView0.frame = CGRectMake(0, self.categoryHeight, self.viewSizeWidth/colunm, 0);
+            self.myTableView0.frame = CGRectMake(0, self.categoryHeight, Screen_Width/colunm, 0);
             self.myTableView1.frame = CGRectMake(self.myTableView0.viewDistanceX, self.myTableView0.viewOriginY, self.myTableView0.viewSizeWidth, self.myTableView0.viewSizeHeight);
             self.myTableView2.frame = CGRectMake(self.myTableView1.viewDistanceX, self.myTableView0.viewOriginY, self.myTableView0.viewSizeWidth, self.myTableView0.viewSizeHeight);
             
             [UIView animateWithDuration:0.2 animations:^{
-                weakSelf.myTableView0.frame = CGRectMake(0, weakSelf.categoryHeight, weakSelf.viewSizeWidth/colunm, Screen_Height-weakSelf.categoryHeight-StatusNavigationBarHeight);
+                weakSelf.myTableView0.frame = CGRectMake(0, weakSelf.categoryHeight, Screen_Width/colunm, Screen_Height-weakSelf.categoryHeight-StatusNavigationBarHeight);
                 weakSelf.myTableView1.frame = CGRectMake(weakSelf.myTableView0.viewDistanceX, weakSelf.myTableView0.viewOriginY, weakSelf.myTableView0.viewSizeWidth, weakSelf.myTableView0.viewSizeHeight);
                 weakSelf.myTableView2.frame = CGRectMake(weakSelf.myTableView1.viewDistanceX, weakSelf.myTableView0.viewOriginY, weakSelf.myTableView0.viewSizeWidth, weakSelf.myTableView0.viewSizeHeight);
                 
@@ -374,13 +374,17 @@
         default:
             break;
     }
+    
+    [self reloadData];
 }
 
 - (void)hideMenuAndShowAgain:(BOOL)again
 {
+    [self endEditing:YES];
+    
     WS(weakSelf);
     
-    self.frame = CGRectMake(self.viewOriginX, self.viewOriginY, self.viewSizeWidth, self.categoryHeight);
+    self.frame = CGRectMake(self.viewOriginX, self.viewOriginY, Screen_Width, self.categoryHeight);
     
     if (!again)
     {

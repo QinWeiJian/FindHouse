@@ -12,6 +12,7 @@
 #import "YYAreaDataModel.h"
 #import "CXSearchHouseCell.h"
 #import "CXHouseDetailViewController.h"
+#import "CXHousePriceCustomFilterView.h"
 
 #define CellImageHeight (5*Screen_Width)/9
 
@@ -51,6 +52,8 @@ static NSString *cellIdentifier = @"cellIdentifier";
 @property(nonatomic,assign)NSInteger category1Section0Index;
 @property(nonatomic,assign)NSInteger category2Section0Index;
 @property(nonatomic,assign)NSInteger category3Section0Index;
+
+@property(nonatomic,retain)CXHousePriceCustomFilterView *priceFilterView;
 
 @property(nonatomic,retain)CXBaseTableView *myTableView;
 
@@ -115,7 +118,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
     self.category2Section0Index = -1;
     self.category3Section0Index = -1;
     
-    self.priceArray = [NSArray arrayWithObjects:@"100万以下",@"100万~200万",@"200万~300万",@"300万~500万",@"500万以上", nil];
+    self.priceArray = [NSArray arrayWithObjects:@"不限",@"1000元以下",@"1000 - 2000元",@"2000 - 3000元",@"3000 - 4000元",@"4000 - 5000元",@"5000元以上", nil];
     self.houseTypeArray = [NSArray arrayWithObjects:@"一房一厅",@"单间",@"两房一厅",@"别墅", nil];
     self.moreArray = [NSArray arrayWithObjects:@"1",@"2",@"3", nil];
     
@@ -197,6 +200,17 @@ static NSString *cellIdentifier = @"cellIdentifier";
     }
     
     return _myTableView;
+}
+
+- (CXHousePriceCustomFilterView *)priceFilterView
+{
+    if (!_priceFilterView)
+    {
+        _priceFilterView = [[CXHousePriceCustomFilterView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 45*3)];
+        [_priceFilterView.commitButton addTarget:self action:@selector(priceFilterCommitAction) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    return _priceFilterView;
 }
 
 #pragma mark - YYDropDownMenuDataSource && YYDropDownMenuDelegte
@@ -516,6 +530,26 @@ static NSString *cellIdentifier = @"cellIdentifier";
     }
 }
 
+- (CGFloat)yy_dropDownMenu:(YYDropDownMenu *)menu heightForFooterInCategory:(NSInteger)category section:(NSInteger)section
+{
+    if (category == 1)
+    {
+        return 45*3;
+    }
+    
+    return 0.1;
+}
+
+- (UIView *)yy_dropDownMenu:(YYDropDownMenu *)menu viewForFooterInCategory:(NSInteger)category section:(NSInteger)section
+{
+    if (category == 1)
+    {
+        return self.priceFilterView;
+    }
+    
+    return nil;
+}
+
 - (void)yy_dropDownMenu:(YYDropDownMenu *)menu didSelectCategory:(NSInteger)category
 {
     if (category == 0)
@@ -564,6 +598,17 @@ static NSString *cellIdentifier = @"cellIdentifier";
     
     CXHouseDetailViewController *detailVC = [[CXHouseDetailViewController alloc] init];
     [self.navigationController pushViewController:detailVC animated:YES];
+}
+
+#pragma mrak - Action
+
+- (void)priceFilterCommitAction
+{
+    self.category1Section0Index = -1;
+    
+    [self.filterMenu setCategoryString:self.priceFilterView.priceLabel.text categoryIndex:1];
+    
+    [self.filterMenu hideMenuAndShowAgain:NO];
 }
 
 @end

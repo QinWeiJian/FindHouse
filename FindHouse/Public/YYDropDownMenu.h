@@ -38,6 +38,12 @@ typedef void(^YYDropDownMenuHideMenuBlock)(void);
 
 - (NSInteger)yy_dropDownMenu:(YYDropDownMenu *)menu selectedIndexInCategory:(NSInteger)category section:(NSInteger)section;
 
+- (CGFloat)yy_dropDownMenu:(YYDropDownMenu *)menu heightForFooterInCategory:(NSInteger)category section:(NSInteger)section;
+
+@optional
+
+- (UIView *)yy_dropDownMenu:(YYDropDownMenu *)menu viewForFooterInCategory:(NSInteger)category section:(NSInteger)section;
+
 @end
 
 @interface YYDropDownMenu : CXBaseView
@@ -49,6 +55,8 @@ typedef void(^YYDropDownMenuHideMenuBlock)(void);
 @property(nonatomic,copy)YYDropDownMenuHideMenuBlock hideMenuBlock;
 
 - (void)reloadData;
+
+- (void)hideMenuAndShowAgain:(BOOL)again;
 
 - (void)setCategoryString:(NSString *)catogoryString categoryIndex:(NSInteger)index;
 

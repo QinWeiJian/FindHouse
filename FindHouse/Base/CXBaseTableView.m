@@ -17,6 +17,7 @@
         self.showsHorizontalScrollIndicator = NO;
         self.showsVerticalScrollIndicator = NO;
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
+        self.backgroundColor = CX_WhiteColor;
     }
     
     return self;

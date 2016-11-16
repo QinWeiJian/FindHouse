@@ -69,6 +69,7 @@
 #define WS(weakSelf) __weak __typeof(&*self) weakSelf = self
 
 #define FontSize(x) [UIFont systemFontOfSize:x]
+#define BoldFontSize(x) [UIFont boldSystemFontOfSize:x]
 
 #define ImageWithNamed(s) [UIImage imageNamed:s]
 

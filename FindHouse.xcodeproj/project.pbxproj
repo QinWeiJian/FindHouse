@@ -70,6 +70,9 @@
 		6D3CFFD01DD0209C0029A37F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3CFFCF1DD0209C0029A37F /* main.m */; };
 		6D3CFFD31DD0209C0029A37F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3CFFD21DD0209C0029A37F /* AppDelegate.m */; };
 		6D3CFFDB1DD0209C0029A37F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D3CFFDA1DD0209C0029A37F /* Assets.xcassets */; };
+		6D5EC2BC1DDC039C008A6F5B /* CXMyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5EC2BB1DDC039C008A6F5B /* CXMyCollectionViewController.m */; };
+		6D5EC2C51DDC3270008A6F5B /* CXHousePriceCustomFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5EC2C41DDC3270008A6F5B /* CXHousePriceCustomFilterView.m */; };
+		6D5EC2C91DDC3B23008A6F5B /* MARKRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5EC2C81DDC3B23008A6F5B /* MARKRangeSlider.m */; };
 		6D727F951DD96A3C00B2E856 /* CXHouseListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D727F941DD96A3C00B2E856 /* CXHouseListCell.m */; };
 		6D727F981DD995BB00B2E856 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D727F971DD995BB00B2E856 /* UIPlaceHolderTextView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6D727F9C1DD995F500B2E856 /* CXFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D727F9B1DD995F500B2E856 /* CXFeedBackViewController.m */; };
@@ -83,6 +86,9 @@
 		6D87C0001DDAE6640056B352 /* CXCalculatorPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D87BFFF1DDAE6640056B352 /* CXCalculatorPriceView.m */; };
 		6D87C0031DDAEED10056B352 /* CXDetailDisclosureIndicatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D87C0021DDAEED10056B352 /* CXDetailDisclosureIndicatorCell.m */; };
 		6D87C0061DDAEEEF0056B352 /* CXDetailTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D87C0051DDAEEEF0056B352 /* CXDetailTextFieldCell.m */; };
+		6D87C0201DDB0C080056B352 /* UITableViewCell+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D87C01C1DDB0C080056B352 /* UITableViewCell+JZExtension.m */; };
+		6D87C0211DDB0C080056B352 /* UITableViewRowAction+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D87C01E1DDB0C080056B352 /* UITableViewRowAction+JZExtension.m */; };
+		6D87C0221DDB0C080056B352 /* UITableViewRowAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D87C01F1DDB0C080056B352 /* UITableViewRowAction.m */; };
 		6D8CEC061DD56CCC0048F800 /* CXHouseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CEC051DD56CCC0048F800 /* CXHouseDetailViewController.m */; };
 		6D8CEC0A1DD5A89C0048F800 /* CXHouseMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CEC091DD5A89C0048F800 /* CXHouseMessageCell.m */; };
 		6D8CEC0D1DD5BBEA0048F800 /* CXHouseTapLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CEC0C1DD5BBEA0048F800 /* CXHouseTapLabel.m */; };
@@ -219,6 +225,12 @@
 		6D3CFFFD1DD023020029A37F /* NSDate+CXDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CXDate.h"; sourceTree = "<group>"; };
 		6D3CFFFE1DD023020029A37F /* NSDate+CXDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CXDate.m"; sourceTree = "<group>"; };
 		6D3CFFFF1DD023020029A37F /* NSMutableDictionary+CXMutableDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+CXMutableDictionary.h"; sourceTree = "<group>"; };
+		6D5EC2BA1DDC039C008A6F5B /* CXMyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMyCollectionViewController.h; sourceTree = "<group>"; };
+		6D5EC2BB1DDC039C008A6F5B /* CXMyCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMyCollectionViewController.m; sourceTree = "<group>"; };
+		6D5EC2C31DDC3270008A6F5B /* CXHousePriceCustomFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHousePriceCustomFilterView.h; sourceTree = "<group>"; };
+		6D5EC2C41DDC3270008A6F5B /* CXHousePriceCustomFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHousePriceCustomFilterView.m; sourceTree = "<group>"; };
+		6D5EC2C71DDC3B23008A6F5B /* MARKRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARKRangeSlider.h; sourceTree = "<group>"; };
+		6D5EC2C81DDC3B23008A6F5B /* MARKRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARKRangeSlider.m; sourceTree = "<group>"; };
 		6D727F931DD96A3C00B2E856 /* CXHouseListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHouseListCell.h; sourceTree = "<group>"; };
 		6D727F941DD96A3C00B2E856 /* CXHouseListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHouseListCell.m; sourceTree = "<group>"; };
 		6D727F961DD995BB00B2E856 /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
@@ -245,6 +257,10 @@
 		6D87C0021DDAEED10056B352 /* CXDetailDisclosureIndicatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDetailDisclosureIndicatorCell.m; sourceTree = "<group>"; };
 		6D87C0041DDAEEEF0056B352 /* CXDetailTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDetailTextFieldCell.h; sourceTree = "<group>"; };
 		6D87C0051DDAEEEF0056B352 /* CXDetailTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDetailTextFieldCell.m; sourceTree = "<group>"; };
+		6D87C01C1DDB0C080056B352 /* UITableViewCell+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+JZExtension.m"; sourceTree = "<group>"; };
+		6D87C01D1DDB0C080056B352 /* UITableViewRowAction+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewRowAction+JZExtension.h"; sourceTree = "<group>"; };
+		6D87C01E1DDB0C080056B352 /* UITableViewRowAction+JZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewRowAction+JZExtension.m"; sourceTree = "<group>"; };
+		6D87C01F1DDB0C080056B352 /* UITableViewRowAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableViewRowAction.m; sourceTree = "<group>"; };
 		6D8CEC041DD56CCC0048F800 /* CXHouseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHouseDetailViewController.h; sourceTree = "<group>"; };
 		6D8CEC051DD56CCC0048F800 /* CXHouseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHouseDetailViewController.m; sourceTree = "<group>"; };
 		6D8CEC081DD5A89C0048F800 /* CXHouseMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHouseMessageCell.h; sourceTree = "<group>"; };
@@ -354,6 +370,8 @@
 		6D3C00231DD023020029A37F /* ThirdPart */ = {
 			isa = PBXGroup;
 			children = (
+				6D5EC2C61DDC3B23008A6F5B /* MARKRangeSlider */,
+				6D87C01B1DDB0C080056B352 /* JZTableViewRowAction */,
 				6D3C00291DD023020029A37F /* GWLPhotoSelector */,
 				6D3C003B1DD023020029A37F /* JSONKit */,
 				6D3C003E1DD023020029A37F /* TPTableView */,
@@ -401,6 +419,7 @@
 		6D3C006F1DD028120029A37F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6D5EC2B91DDC0352008A6F5B /* 我的收藏 */,
 				6D87BFE41DDAAC060056B352 /* 计算器 */,
 				6D727F9D1DD99CC800B2E856 /* 设置 */,
 				6D727F991DD995E500B2E856 /* 意见反馈 */,
@@ -528,6 +547,8 @@
 				6D3C00B71DD099E60029A37F /* CXSearchView.m */,
 				6D34357A1DD4478D00EF90E3 /* CXSearchHouseCell.h */,
 				6D34357B1DD4478D00EF90E3 /* CXSearchHouseCell.m */,
+				6D5EC2C31DDC3270008A6F5B /* CXHousePriceCustomFilterView.h */,
+				6D5EC2C41DDC3270008A6F5B /* CXHousePriceCustomFilterView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -622,6 +643,24 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		6D5EC2B91DDC0352008A6F5B /* 我的收藏 */ = {
+			isa = PBXGroup;
+			children = (
+				6D5EC2BA1DDC039C008A6F5B /* CXMyCollectionViewController.h */,
+				6D5EC2BB1DDC039C008A6F5B /* CXMyCollectionViewController.m */,
+			);
+			name = "我的收藏";
+			sourceTree = "<group>";
+		};
+		6D5EC2C61DDC3B23008A6F5B /* MARKRangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				6D5EC2C71DDC3B23008A6F5B /* MARKRangeSlider.h */,
+				6D5EC2C81DDC3B23008A6F5B /* MARKRangeSlider.m */,
+			);
+			path = MARKRangeSlider;
+			sourceTree = "<group>";
+		};
 		6D727F991DD995E500B2E856 /* 意见反馈 */ = {
 			isa = PBXGroup;
 			children = (
@@ -677,6 +716,17 @@
 				6D87C0051DDAEEEF0056B352 /* CXDetailTextFieldCell.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		6D87C01B1DDB0C080056B352 /* JZTableViewRowAction */ = {
+			isa = PBXGroup;
+			children = (
+				6D87C01C1DDB0C080056B352 /* UITableViewCell+JZExtension.m */,
+				6D87C01D1DDB0C080056B352 /* UITableViewRowAction+JZExtension.h */,
+				6D87C01E1DDB0C080056B352 /* UITableViewRowAction+JZExtension.m */,
+				6D87C01F1DDB0C080056B352 /* UITableViewRowAction.m */,
+			);
+			path = JZTableViewRowAction;
 			sourceTree = "<group>";
 		};
 		6D8CEC031DD569890048F800 /* 房源详情 */ = {
@@ -844,10 +894,12 @@
 				6D3C006C1DD023020029A37F /* TPKeyboardAvoidingTableView.m in Sources */,
 				6D8CEC131DD5D3350048F800 /* CXHouseCommentCell.m in Sources */,
 				6D87C0001DDAE6640056B352 /* CXCalculatorPriceView.m in Sources */,
+				6D87C0211DDB0C080056B352 /* UITableViewRowAction+JZExtension.m in Sources */,
 				6D3435801DD45ADA00EF90E3 /* CXOpenCityViewController.m in Sources */,
 				6D3C00571DD023020029A37F /* CXAddImageView.m in Sources */,
 				6D3C005A1DD023020029A37F /* CXUserInfoDataModel.m in Sources */,
 				6D3C00791DD02A3E0029A37F /* CXHomeViewController.m in Sources */,
+				6D5EC2C91DDC3B23008A6F5B /* MARKRangeSlider.m in Sources */,
 				6D3C005B1DD023020029A37F /* RunImageScrollView.m in Sources */,
 				6D3C00641DD023020029A37F /* GWLPhotoLibrayController.m in Sources */,
 				6D3435741DD4166400EF90E3 /* YYDropDownMenu.m in Sources */,
@@ -868,6 +920,7 @@
 				6D3C00981DD066260029A37F /* CXNetworkingTool.m in Sources */,
 				6D3C00551DD023020029A37F /* UIViewController+CXViewController.m in Sources */,
 				6D3C00521DD023020029A37F /* NSString+CXString.m in Sources */,
+				6D5EC2C51DDC3270008A6F5B /* CXHousePriceCustomFilterView.m in Sources */,
 				6D3C006A1DD023020029A37F /* JSONKit.m in Sources */,
 				6D3C005E1DD023020029A37F /* YYViewPicturesZoomScrollView.m in Sources */,
 				6D3C00541DD023020029A37F /* UIView+CXView.m in Sources */,
@@ -885,12 +938,15 @@
 				6D3C004F1DD023020029A37F /* CXBaseViewController.m in Sources */,
 				6D3C00511DD023020029A37F /* NSMutableDictionary+CXMutableDictionary.m in Sources */,
 				6D3C009F1DD06F850029A37F /* CXHomeCityMarketCell.m in Sources */,
+				6D87C0201DDB0C080056B352 /* UITableViewCell+JZExtension.m in Sources */,
 				6D3C00581DD023020029A37F /* CXInsetsField.m in Sources */,
 				6D727F951DD96A3C00B2E856 /* CXHouseListCell.m in Sources */,
 				6D3C00991DD066260029A37F /* CXProcessDataTool.m in Sources */,
 				6D8CEC0A1DD5A89C0048F800 /* CXHouseMessageCell.m in Sources */,
 				6D87C0031DDAEED10056B352 /* CXDetailDisclosureIndicatorCell.m in Sources */,
 				6D3C00501DD023020029A37F /* NSDate+CXDate.m in Sources */,
+				6D5EC2BC1DDC039C008A6F5B /* CXMyCollectionViewController.m in Sources */,
+				6D87C0221DDB0C080056B352 /* UITableViewRowAction.m in Sources */,
 				6D3C00861DD05A710029A37F /* CXHomeSearchView.m in Sources */,
 				6D727FA41DD99DD800B2E856 /* CXDetailLabelCellView.m in Sources */,
 				6D3C00461DD023020029A37F /* CXBaseDataModel.m in Sources */,

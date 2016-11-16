@@ -1,35 +1,39 @@
 //
-//  CXMessageViewController.m
+//  CXMyCollectionViewController.m
 //  FindHouse
 //
-//  Created by chengxikeji on 16/11/7.
+//  Created by chengxikeji on 16/11/16.
 //  Copyright © 2016年 cx. All rights reserved.
 //
 
-#import "CXMessageViewController.h"
-#import "CXMessageNormalCell.h"
-#import "CXLoginViewController.h"
+#import "CXMyCollectionViewController.h"
 #import "UITableViewRowAction+JZExtension.h"
+#import "CXHouseListCell.h"
 
 static NSString *cellIdentifier = @"cellIdentifier";
 
-@interface CXMessageViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface CXMyCollectionViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,retain)CXBaseTableView *myTableView;
 
 @end
 
-@implementation CXMessageViewController
+@implementation CXMyCollectionViewController
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.title = @"消息";
+    self.title = @"我的收藏";
     
     [self.view addSubview:self.myTableView];
-    
-    self.navigationItem.leftBarButtonItem = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,11 +47,11 @@ static NSString *cellIdentifier = @"cellIdentifier";
 {
     if (!_myTableView)
     {
-        _myTableView = [[CXBaseTableView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height-TabBarHeight-StatusNavigationBarHeight) style:UITableViewStyleGrouped];
+        _myTableView = [[CXBaseTableView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height-StatusNavigationBarHeight) style:UITableViewStyleGrouped];
         _myTableView.delegate = self;
         _myTableView.dataSource = self;
         
-        [_myTableView registerClass:[CXMessageNormalCell class] forCellReuseIdentifier:cellIdentifier];
+        [_myTableView registerClass:[CXHouseListCell class] forCellReuseIdentifier:cellIdentifier];
     }
     
     return _myTableView;
@@ -57,24 +61,24 @@ static NSString *cellIdentifier = @"cellIdentifier";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CXMessageNormalCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    CXHouseListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     return cell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 5;
+    return 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 70;
+    return 100;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -98,7 +102,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
 //    WS(weakSelf);
     
     void(^rowActionHandler)(UITableViewRowAction *, NSIndexPath *) = ^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-//        [weakSelf.myTableView deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationLeft];
+        //        [weakSelf.myTableView deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationLeft];
     };
     
     UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault image:ImageWithNamed(@"cell_delete") handler:rowActionHandler];
@@ -109,11 +113,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    CXLoginViewController *loginVC = [[CXLoginViewController alloc] init];
-    [self presentViewController:loginVC animated:YES completion:^{
-        
-    }];
 }
+
 
 @end
