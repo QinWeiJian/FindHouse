@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		473932BD7CFE8E39B3E7357E /* libPods-FindHouse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F3FF9331631B2039D0CA0F /* libPods-FindHouse.a */; };
 		6D1D6D7A1DDD53D5009F050F /* CXRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D6D791DDD53D5009F050F /* CXRefreshHeader.m */; };
+		6D1D6D801DDD824F009F050F /* CXProgressHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D6D7F1DDD824F009F050F /* CXProgressHud.m */; };
+		6D1D6D831DDD8680009F050F /* CXRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D6D821DDD8680009F050F /* CXRefreshFooter.m */; };
 		6D3435741DD4166400EF90E3 /* YYDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3435731DD4166400EF90E3 /* YYDropDownMenu.m */; };
 		6D3435771DD4219600EF90E3 /* YYAreaDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3435761DD4219600EF90E3 /* YYAreaDataModel.m */; };
 		6D3435791DD421DD00EF90E3 /* Area.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6D3435781DD421DD00EF90E3 /* Area.txt */; };
@@ -101,6 +103,10 @@
 		6C1DA4296E82D2C682861CFD /* Pods-FindHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindHouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindHouse/Pods-FindHouse.debug.xcconfig"; sourceTree = "<group>"; };
 		6D1D6D781DDD53D5009F050F /* CXRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXRefreshHeader.h; sourceTree = "<group>"; };
 		6D1D6D791DDD53D5009F050F /* CXRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXRefreshHeader.m; sourceTree = "<group>"; };
+		6D1D6D7E1DDD824F009F050F /* CXProgressHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXProgressHud.h; sourceTree = "<group>"; };
+		6D1D6D7F1DDD824F009F050F /* CXProgressHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXProgressHud.m; sourceTree = "<group>"; };
+		6D1D6D811DDD8680009F050F /* CXRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXRefreshFooter.h; sourceTree = "<group>"; };
+		6D1D6D821DDD8680009F050F /* CXRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXRefreshFooter.m; sourceTree = "<group>"; };
 		6D3435721DD4166400EF90E3 /* YYDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDropDownMenu.h; sourceTree = "<group>"; };
 		6D3435731DD4166400EF90E3 /* YYDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDropDownMenu.m; sourceTree = "<group>"; };
 		6D3435751DD4219600EF90E3 /* YYAreaDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAreaDataModel.h; sourceTree = "<group>"; };
@@ -355,6 +361,10 @@
 				6D87BFE61DDAADC40056B352 /* CXSegmentView.m */,
 				6D1D6D781DDD53D5009F050F /* CXRefreshHeader.h */,
 				6D1D6D791DDD53D5009F050F /* CXRefreshHeader.m */,
+				6D1D6D811DDD8680009F050F /* CXRefreshFooter.h */,
+				6D1D6D821DDD8680009F050F /* CXRefreshFooter.m */,
+				6D1D6D7E1DDD824F009F050F /* CXProgressHud.h */,
+				6D1D6D7F1DDD824F009F050F /* CXProgressHud.m */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -957,6 +967,7 @@
 				6D727FA41DD99DD800B2E856 /* CXDetailLabelCellView.m in Sources */,
 				6D3C00461DD023020029A37F /* CXBaseDataModel.m in Sources */,
 				6D3C00621DD023020029A37F /* GWLPhotoGroupDetailController.m in Sources */,
+				6D1D6D801DDD824F009F050F /* CXProgressHud.m in Sources */,
 				6D3C00B41DD095A80029A37F /* CXSearchHouseViewController.m in Sources */,
 				6D87BFEA1DDAB3680056B352 /* CXCalculatorViewController.m in Sources */,
 				6D87C0061DDAEEEF0056B352 /* CXDetailTextFieldCell.m in Sources */,
@@ -974,6 +985,7 @@
 				6D3C00531DD023020029A37F /* UIImageView+CXWebImageView.m in Sources */,
 				6D3C00891DD05ECD0029A37F /* CXHomeFunctionCell.m in Sources */,
 				6D3C00831DD031B20029A37F /* CXHomeNavigationBarView.m in Sources */,
+				6D1D6D831DDD8680009F050F /* CXRefreshFooter.m in Sources */,
 				6D3435841DD46D4500EF90E3 /* CXLoginViewController.m in Sources */,
 				6D3C008C1DD05F780029A37F /* CXLeftImageFunctionView.m in Sources */,
 				6D3C00AC1DD081990029A37F /* CXMineNormalCell.m in Sources */,

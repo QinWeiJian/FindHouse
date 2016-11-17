@@ -13,29 +13,28 @@
 /**展示加载*/
 - (void)cx_showHubInView:(UIView *)view
 {
-    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
-    hud.opacity = 1;
-    //    hud.activityIndicatorColor = cx_BlackColor;
-//    hud.color = [UIColor clearColor];
-    [view addSubview:hud];
-    [hud show:YES];
+    CXProgressHud *hud = [[CXProgressHud alloc] initWithView:view progressText:@""];
+    [hud show];
 }
 
 /**展示加载*/
 - (void)cx_showHubInView:(UIView *)view showText:(NSString *)showText
 {
-    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
-    hud.opacity = 1;
-    hud.labelFont = FontSize(14);
-    hud.labelText = showText;
-    [view addSubview:hud];
-    [hud show:YES];
+    CXProgressHud *hud = [[CXProgressHud alloc] initWithView:view progressText:showText];
+    [hud show];
 }
 
 /**隐藏加载*/
 - (void)cx_hideHubForView:(UIView *)view
 {
-    [MBProgressHUD hideHUDForView:view animated:YES];
+    for (UIView *subView in view.subviews)
+    {
+        if ([subView isKindOfClass:[CXProgressHud class]])
+        {
+            CXProgressHud *hud = (CXProgressHud *)subView;
+            [hud hide];
+        }
+    }
 }
 
 /**提示框*/
@@ -72,7 +71,7 @@
 }
 
 /**MJRefresh Header*/
-- (CXRefreshHeader *)cx_getMJRefreshNormalHeaderWithTarget:(id)target refreshingAction:(SEL)action
+- (CXRefreshHeader *)cx_getRefreshHeaderWithTarget:(id)target refreshingAction:(SEL)action
 {
     // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
     CXRefreshHeader *header = [CXRefreshHeader headerWithRefreshingTarget:target refreshingAction:action];
@@ -80,9 +79,9 @@
     return header;
 }
 
-- (MJRefreshBackNormalFooter *)cx_getMJRefreshAutoNormalFooterWithTarget:(id)target refreshingAction:(SEL)action
+- (CXRefreshFooter *)cx_getRefreshFooterWithTarget:(id)target refreshingAction:(SEL)action
 {
-    MJRefreshBackNormalFooter *footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:target refreshingAction:action];
+    CXRefreshFooter *footer = [CXRefreshFooter footerWithRefreshingTarget:target refreshingAction:action];
     
     return footer;
 }

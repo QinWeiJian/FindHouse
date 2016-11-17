@@ -198,7 +198,9 @@ static NSString *cellIdentifier = @"cellIdentifier";
         
         [_myTableView registerClass:[CXSearchHouseCell class] forCellReuseIdentifier:cellIdentifier];
         
-        _myTableView.mj_header = [self cx_getMJRefreshNormalHeaderWithTarget:self refreshingAction:@selector(headerRefreshing)];
+        _myTableView.mj_header = [self cx_getRefreshHeaderWithTarget:self refreshingAction:@selector(headerRefreshing)];
+        
+        _myTableView.mj_footer = [self cx_getRefreshFooterWithTarget:self refreshingAction:@selector(footerRefreshing)];
     }
     
     return _myTableView;
@@ -616,6 +618,11 @@ static NSString *cellIdentifier = @"cellIdentifier";
 #pragma mark - Refreshing
 
 - (void)headerRefreshing
+{
+    
+}
+
+- (void)footerRefreshing
 {
     
 }
