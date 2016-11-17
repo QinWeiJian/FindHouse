@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MJRefreshNormalHeader.h>
+#import "CXRefreshHeader.h"
 #import <MJRefreshAutoNormalFooter.h>
+#import <MJRefreshBackNormalFooter.h>
 #import <MBProgressHUD.h>
 
 @interface UIViewController (CXViewController)
@@ -26,10 +27,10 @@
 - (void)cx_showAlertViewWithMessage:(NSString *)message;
 
 /**MJRefresh Header*/
-- (MJRefreshNormalHeader *)cx_getMJRefreshNormalHeaderWithTarget:(id)target refreshingAction:(SEL)action;
+- (CXRefreshHeader *)cx_getMJRefreshNormalHeaderWithTarget:(id)target refreshingAction:(SEL)action;
 
 /**MJRefresh Footer*/
-- (MJRefreshAutoNormalFooter *)cx_getMJRefreshAutoNormalFooterWithTarget:(id)target refreshingAction:(SEL)action;
+- (MJRefreshBackNormalFooter *)cx_getMJRefreshAutoNormalFooterWithTarget:(id)target refreshingAction:(SEL)action;
 
 - (void)cx_goLoginVC;
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		473932BD7CFE8E39B3E7357E /* libPods-FindHouse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F3FF9331631B2039D0CA0F /* libPods-FindHouse.a */; };
+		6D1D6D7A1DDD53D5009F050F /* CXRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1D6D791DDD53D5009F050F /* CXRefreshHeader.m */; };
 		6D3435741DD4166400EF90E3 /* YYDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3435731DD4166400EF90E3 /* YYDropDownMenu.m */; };
 		6D3435771DD4219600EF90E3 /* YYAreaDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3435761DD4219600EF90E3 /* YYAreaDataModel.m */; };
 		6D3435791DD421DD00EF90E3 /* Area.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6D3435781DD421DD00EF90E3 /* Area.txt */; };
@@ -98,6 +99,8 @@
 
 /* Begin PBXFileReference section */
 		6C1DA4296E82D2C682861CFD /* Pods-FindHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindHouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FindHouse/Pods-FindHouse.debug.xcconfig"; sourceTree = "<group>"; };
+		6D1D6D781DDD53D5009F050F /* CXRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXRefreshHeader.h; sourceTree = "<group>"; };
+		6D1D6D791DDD53D5009F050F /* CXRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXRefreshHeader.m; sourceTree = "<group>"; };
 		6D3435721DD4166400EF90E3 /* YYDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDropDownMenu.h; sourceTree = "<group>"; };
 		6D3435731DD4166400EF90E3 /* YYDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDropDownMenu.m; sourceTree = "<group>"; };
 		6D3435751DD4219600EF90E3 /* YYAreaDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAreaDataModel.h; sourceTree = "<group>"; };
@@ -350,6 +353,8 @@
 				6D3C001B1DD023020029A37F /* YYViewPicturesZoomScrollView.m */,
 				6D87BFE51DDAADC40056B352 /* CXSegmentView.h */,
 				6D87BFE61DDAADC40056B352 /* CXSegmentView.m */,
+				6D1D6D781DDD53D5009F050F /* CXRefreshHeader.h */,
+				6D1D6D791DDD53D5009F050F /* CXRefreshHeader.m */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -899,6 +904,7 @@
 				6D3C00571DD023020029A37F /* CXAddImageView.m in Sources */,
 				6D3C005A1DD023020029A37F /* CXUserInfoDataModel.m in Sources */,
 				6D3C00791DD02A3E0029A37F /* CXHomeViewController.m in Sources */,
+				6D1D6D7A1DDD53D5009F050F /* CXRefreshHeader.m in Sources */,
 				6D5EC2C91DDC3B23008A6F5B /* MARKRangeSlider.m in Sources */,
 				6D3C005B1DD023020029A37F /* RunImageScrollView.m in Sources */,
 				6D3C00641DD023020029A37F /* GWLPhotoLibrayController.m in Sources */,

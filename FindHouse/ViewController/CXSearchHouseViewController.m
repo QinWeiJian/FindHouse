@@ -197,6 +197,8 @@ static NSString *cellIdentifier = @"cellIdentifier";
         _myTableView.dataSource = self;
         
         [_myTableView registerClass:[CXSearchHouseCell class] forCellReuseIdentifier:cellIdentifier];
+        
+        _myTableView.mj_header = [self cx_getMJRefreshNormalHeaderWithTarget:self refreshingAction:@selector(headerRefreshing)];
     }
     
     return _myTableView;
@@ -609,6 +611,13 @@ static NSString *cellIdentifier = @"cellIdentifier";
     [self.filterMenu setCategoryString:self.priceFilterView.priceLabel.text categoryIndex:1];
     
     [self.filterMenu hideMenuAndShowAgain:NO];
+}
+
+#pragma mark - Refreshing
+
+- (void)headerRefreshing
+{
+    
 }
 
 @end
