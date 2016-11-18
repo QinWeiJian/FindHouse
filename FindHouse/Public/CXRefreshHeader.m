@@ -36,11 +36,11 @@
     
     UIImage *stateImage = ImageWithNamed(@"refresh_1");
     
-    self.mj_h = stateImage.size.height+ViewMargin_10*3+30;
-    
     self.gifView.frame = CGRectMake(Screen_Width/2-stateImage.size.width/2, ViewMargin_10*2, stateImage.size.width, stateImage.size.height);
     
     self.stateLabel.frame = CGRectMake(ViewMargin_10, self.gifView.viewDistanceY, Screen_Width-ViewMargin_Double_10, 30);
+    
+    self.mj_h = self.stateLabel.viewDistanceY+ViewMargin_10;
 }
 
 @end
