@@ -57,6 +57,8 @@ static NSString *cellIdentifier = @"cellIdentifier";
 
 @property(nonatomic,retain)CXBaseTableView *myTableView;
 
+@property(nonatomic,retain)CXBaseView *moreView;
+
 @end
 
 @implementation CXSearchHouseViewController
@@ -126,6 +128,16 @@ static NSString *cellIdentifier = @"cellIdentifier";
 }
 
 #pragma mark - Getter
+
+- (CXBaseView *)moreView
+{
+    if (!_moreView)
+    {
+        _moreView = [[CXBaseView alloc] init];
+    }
+    
+    return _moreView;
+}
 
 - (CXBaseView *)navigationBarView
 {
@@ -317,10 +329,12 @@ static NSString *cellIdentifier = @"cellIdentifier";
     if (category == 0)
     {
         return 3;
-    }else
+    }else if (category == 3)
     {
-        return 1;
+        return 0;
     }
+    
+    return 1;
 }
 
 - (NSInteger)yy_dropDownMenu:(YYDropDownMenu *)menu numberOfRowInCategory:(NSInteger)category section:(NSInteger)section
@@ -343,9 +357,6 @@ static NSString *cellIdentifier = @"cellIdentifier";
     }else if (category == 2)
     {
         return self.houseTypeArray.count;
-    }else
-    {
-        return self.moreArray.count;
     }
     
     return 0;
@@ -371,9 +382,6 @@ static NSString *cellIdentifier = @"cellIdentifier";
     }else if (category == 2)
     {
         return [self.houseTypeArray objectAtIndex:indexPath.row];
-    }else
-    {
-        return [self.moreArray objectAtIndex:indexPath.row];
     }
     
     return @"";
@@ -524,13 +532,6 @@ static NSString *cellIdentifier = @"cellIdentifier";
         [self.filterMenu setCategoryString:self.houseTypeString categoryIndex:category];
         
         self.category2Section0Index = indexPath.row;
-    }else
-    {
-        self.moreString = [self.moreArray objectAtIndex:indexPath.row];
-        
-        [self.filterMenu setCategoryString:self.moreString categoryIndex:category];
-        
-        self.category3Section0Index = indexPath.row;
     }
 }
 
@@ -546,7 +547,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
 
 - (UIView *)yy_dropDownMenu:(YYDropDownMenu *)menu viewForFooterInCategory:(NSInteger)category section:(NSInteger)section
 {
-    if (category == 1)
+    if (category == 1 && section == 0)
     {
         return self.priceFilterView;
     }
@@ -560,6 +561,35 @@ static NSString *cellIdentifier = @"cellIdentifier";
     {
         [self resetAddressData];
     }
+}
+
+- (BOOL)yy_dropDownMenu:(YYDropDownMenu *)menu haveCustomMenuInCategory:(NSInteger)category
+{
+    if (category == 3)
+    {
+        return YES;
+    }
+    return NO;
+}
+
+- (UIView *)yy_dropDownMenu:(YYDropDownMenu *)menu viewForCustomMenuInCategory:(NSInteger)category
+{
+    if (category == 3)
+    {
+        return self.moreView;
+    }
+    
+    return nil;
+}
+
+- (CGFloat)yy_dropDownMenu:(YYDropDownMenu *)menu heightForCustomMenuInCategory:(NSInteger)category
+{
+    if (category == 3)
+    {
+        return 200;
+    }
+    
+    return 0;
 }
 
 #pragma mark - UITableView Delegate && DataSource

@@ -51,6 +51,22 @@
     [self addSubview:self.myTableView0];
     [self addSubview:self.myTableView1];
     [self addSubview:self.myTableView2];
+    
+    [self setupCustomMenu];
+}
+
+- (void)setupCustomMenu
+{
+    NSInteger categoryCount = [self.dataSource yy_dropDownMenuNumberOfCategoryInMenu:self];
+    
+    for (int i = 0; i < categoryCount; i++)
+    {
+        if ([self.dataSource yy_dropDownMenu:self haveCustomMenuInCategory:i])
+        {
+            UIView *customMenu = [self.dataSource yy_dropDownMenu:self viewForCustomMenuInCategory:i];
+            [self addSubview:customMenu];
+        }
+    }
 }
 
 - (void)createCategoryView
@@ -269,14 +285,12 @@
                 [self showMenu];
             }else
             {
-                self.currentSelectedIndex = -1;
-                
                 [self hideMenuAndShowAgain:NO];
+                
+                self.currentSelectedIndex = -1;
             }
         }else
         {
-            self.currentSelectedIndex = index;
-            
             for (UIButton *button in self.categoryArray)
             {
                 button.selected = NO;
@@ -285,6 +299,8 @@
             sender.selected = YES;
             
             [self hideMenuAndShowAgain:YES];
+            
+            self.currentSelectedIndex = index;
         }
     }
 }
@@ -302,6 +318,26 @@
     self.bgControl.frame = CGRectMake(0, self.categoryHeight, Screen_Width, Screen_Height-self.categoryHeight-StatusNavigationBarHeight);
     
     WS(weakSelf);
+    
+    if ([self.dataSource yy_dropDownMenu:self haveCustomMenuInCategory:self.currentSelectedIndex])
+    {
+        CGFloat menuHeight = [self.dataSource yy_dropDownMenu:self heightForCustomMenuInCategory:self.currentSelectedIndex];
+        
+        menuHeight = menuHeight > (Screen_Height-self.categoryHeight-StatusNavigationBarHeight) ? (Screen_Height-self.categoryHeight-StatusNavigationBarHeight) : menuHeight;
+        
+        UIView *customMenu = [self.dataSource yy_dropDownMenu:self viewForCustomMenuInCategory:self.currentSelectedIndex];
+        
+        customMenu.frame = CGRectMake(0, self.categoryHeight, Screen_Width, 0);
+        
+        [UIView animateWithDuration:0.2 animations:^{
+            
+            customMenu.frame = CGRectMake(0, weakSelf.categoryHeight, Screen_Width, menuHeight);
+            
+            weakSelf.bgControl.alpha = 0.3;
+        }];
+        
+        return;
+    }
     
     switch (colunm)
     {
@@ -376,16 +412,17 @@
             break;
     }
     
-    [self reloadData];
+    if (![self.dataSource yy_dropDownMenu:self haveCustomMenuInCategory:self.currentSelectedIndex])
+    {
+        [self reloadData];
+    }
 }
 
 - (void)hideMenuAndShowAgain:(BOOL)again
 {
-    [self endEditing:YES];
+//    [self endEditing:YES];
     
     WS(weakSelf);
-    
-    self.frame = CGRectMake(self.viewOriginX, self.viewOriginY, Screen_Width, self.categoryHeight);
     
     if (!again)
     {
@@ -395,15 +432,29 @@
         }
     }
     
+    UIView *customMenu;
+    
+    if ([self.dataSource yy_dropDownMenu:self viewForCustomMenuInCategory:self.currentSelectedIndex])
+    {
+        customMenu = [self.dataSource yy_dropDownMenu:self viewForCustomMenuInCategory:self.currentSelectedIndex];
+    }
+    
     [UIView animateWithDuration:0.2 animations:^{
         weakSelf.myTableView0.frame = CGRectMake(weakSelf.myTableView0.viewOriginX, weakSelf.myTableView0.viewOriginY, weakSelf.myTableView0.viewSizeWidth, 0);
         weakSelf.myTableView1.frame = CGRectMake(weakSelf.myTableView1.viewOriginX, weakSelf.myTableView1.viewOriginY, weakSelf.myTableView1.viewSizeWidth, 0);
         weakSelf.myTableView2.frame = CGRectMake(weakSelf.myTableView2.viewOriginX, weakSelf.myTableView2.viewOriginY, weakSelf.myTableView2.viewSizeWidth, 0);
         
+        if (customMenu)
+        {
+            customMenu.frame = CGRectMake(customMenu.viewOriginX, customMenu.viewOriginY, customMenu.viewSizeWidth, 0);
+        }
+        
         weakSelf.bgControl.alpha = 0;
     } completion:^(BOOL finished) {
         if (finished)
         {
+            weakSelf.frame = CGRectMake(weakSelf.viewOriginX, weakSelf.viewOriginY, Screen_Width, weakSelf.categoryHeight);
+            
             if (again)
             {
                 [weakSelf showMenu];

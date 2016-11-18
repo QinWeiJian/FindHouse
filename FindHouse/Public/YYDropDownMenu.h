@@ -40,9 +40,15 @@ typedef void(^YYDropDownMenuHideMenuBlock)(void);
 
 - (CGFloat)yy_dropDownMenu:(YYDropDownMenu *)menu heightForFooterInCategory:(NSInteger)category section:(NSInteger)section;
 
+- (BOOL)yy_dropDownMenu:(YYDropDownMenu *)menu haveCustomMenuInCategory:(NSInteger)category;
+
 @optional
 
 - (UIView *)yy_dropDownMenu:(YYDropDownMenu *)menu viewForFooterInCategory:(NSInteger)category section:(NSInteger)section;
+
+- (CGFloat)yy_dropDownMenu:(YYDropDownMenu *)menu heightForCustomMenuInCategory:(NSInteger)category;
+
+- (UIView *)yy_dropDownMenu:(YYDropDownMenu *)menu viewForCustomMenuInCategory:(NSInteger)category;
 
 @end
 
