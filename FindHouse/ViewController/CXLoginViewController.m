@@ -59,6 +59,8 @@
         _bgView = [[TPKeyboardAvoidingScrollView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height)];
         _bgView.backgroundColor = CX_WhiteColor;
         _bgView.showsVerticalScrollIndicator = NO;
+        _bgView.showsHorizontalScrollIndicator = NO;
+        _bgView.bounces = NO;
     }
     
     return _bgView;
@@ -80,7 +82,7 @@
 {
     if (!_headImageView)
     {
-        _headImageView = [[CXBaseImageView alloc] initWithFrame:CGRectMake(0, 0, Screen_Height, BannerHeight)];
+        _headImageView = [[CXBaseImageView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, BannerHeight)];
         _headImageView.backgroundColor = CX_BlackColor;
     }
     

@@ -61,7 +61,7 @@
 {
     if (!_priceSlider)
     {
-        _priceSlider = [[MARKRangeSlider alloc] initWithFrame:CGRectMake(ViewMargin_10, self.titleLabel.viewDistanceY, self.viewSizeWidth-ViewMargin_Double_10, 45)];
+        _priceSlider = [[MARKRangeSlider alloc] initWithFrame:CGRectMake(ViewMargin_10*2, self.titleLabel.viewDistanceY, self.viewSizeWidth-ViewMargin_Double_10*2, 45)];
         _priceSlider.minimumDistance = 0;
         _priceSlider.leftThumbImage = ImageWithNamed(@"slider_thumb");
         _priceSlider.rightThumbImage = ImageWithNamed(@"slider_thumb");
