@@ -13,4 +13,6 @@
 @property(nonatomic,retain)CXBaseImageView *headImageView;
 @property(nonatomic,retain)CXBaseLabel *phoneLabel;
 
+- (void)setSubFrame;
+
 @end

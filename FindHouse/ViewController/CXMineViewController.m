@@ -59,10 +59,13 @@ static NSString *cellIdentifier = @"cellIdentifier";
 {
     if (!_myTableView)
     {
-        _myTableView = [[CXBaseTableView alloc] initWithFrame:CGRectMake(0, -20, Screen_Width, Screen_Height-TabBarHeight+20) style:UITableViewStyleGrouped];
+        _myTableView = [[CXBaseTableView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height-TabBarHeight) style:UITableViewStyleGrouped];
         _myTableView.delegate = self;
         _myTableView.dataSource = self;
         _myTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        
+        _myTableView.contentInset = UIEdgeInsetsMake(BannerHeight, 0, 0, 0);
+        [_myTableView addSubview:self.headerView];
         
         [_myTableView registerClass:[CXMineNormalCell class] forCellReuseIdentifier:cellIdentifier];
     }
@@ -74,7 +77,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
 {
     if (!_headerView)
     {
-        _headerView = [[CXMineHeaderView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, BannerHeight)];
+        _headerView = [[CXMineHeaderView alloc] initWithFrame:CGRectMake(0, -BannerHeight, Screen_Width, BannerHeight)];
         
         _headerView.backgroundColor = [UIColor blackColor];
     }
@@ -124,7 +127,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
 {
     if (section == 0)
     {
-        return BannerHeight;
+        return 0.1;
     }
     return ViewMargin_10;
 }
@@ -132,15 +135,6 @@ static NSString *cellIdentifier = @"cellIdentifier";
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     return 0.1;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    if (section == 0)
-    {
-        return self.headerView;
-    }
-    return nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -170,5 +164,18 @@ static NSString *cellIdentifier = @"cellIdentifier";
         }
     }
 }
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat y = scrollView.contentOffset.y;
+    
+    if (y <= -BannerHeight)
+    {
+        self.headerView.y = y;
+        self.headerView.height = -y;
+        [self.headerView setSubFrame];
+    }
+}
+
 
 @end

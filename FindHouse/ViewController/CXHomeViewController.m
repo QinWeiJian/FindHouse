@@ -82,9 +82,12 @@ static NSString *marketIdentifier = @"marketIdentifier";
 {
     if (!_myTableView)
     {
-        _myTableView = [[CXBaseTableView alloc] initWithFrame:CGRectMake(0, -20, Screen_Width, Screen_Height-TabBarHeight+20) style:UITableViewStyleGrouped];
+        _myTableView = [[CXBaseTableView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height-TabBarHeight) style:UITableViewStyleGrouped];
         _myTableView.delegate = self;
         _myTableView.dataSource = self;
+        
+        _myTableView.contentInset = UIEdgeInsetsMake(BannerHeight, 0, 0, 0);
+        [_myTableView addSubview:self.headerView];
         
         [_myTableView registerClass:[CXHomeFunctionCell class] forCellReuseIdentifier:functionIdentifier];
         
@@ -98,7 +101,7 @@ static NSString *marketIdentifier = @"marketIdentifier";
 {
     if (!_headerView)
     {
-        _headerView = [[CXBaseView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, BannerHeight)];
+        _headerView = [[CXBaseView alloc] initWithFrame:CGRectMake(0, -BannerHeight, Screen_Width, BannerHeight)];
         
         _headerView.backgroundColor = [UIColor blackColor];
     }
@@ -178,7 +181,7 @@ static NSString *marketIdentifier = @"marketIdentifier";
 {
     if (section == 0)
     {
-        return BannerHeight;
+        return 0.1;
     }
     return RunImageViewHeight;
 }
@@ -190,11 +193,11 @@ static NSString *marketIdentifier = @"marketIdentifier";
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    if (section == 0)
+    if (section == 1)
     {
-        return self.headerView;
+        return self.runImageView;
     }
-    return self.runImageView;
+    return nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -206,7 +209,9 @@ static NSString *marketIdentifier = @"marketIdentifier";
 {
     CGFloat y = scrollView.contentOffset.y;
     
-    CGFloat searchY = BannerHeight-ViewMargin_10-(NavigationBarHeight-ViewMargin_10)-20-y;
+    CGFloat searchY = BannerHeight-ViewMargin_10-(NavigationBarHeight-ViewMargin_10)-y-BannerHeight;
+    
+//    CGFloat searchY = BannerHeight-ViewMargin_10-(NavigationBarHeight-ViewMargin_10)-y-20-BannerHeight;
     
     CGFloat searchBX = ViewMargin_10*3;
     
@@ -216,9 +221,13 @@ static NSString *marketIdentifier = @"marketIdentifier";
     
     CGFloat searchDY = BannerHeight-ViewMargin_10-(NavigationBarHeight-ViewMargin_10) - (StatusBarHeight+ViewMargin_5);
     
-    CGFloat rateLeft = searchDX/(searchDY-20);
+    CGFloat rateLeft = searchDX/(searchDY);
     
-    CGFloat rateRight = (Screen_Width - ViewMargin_10 * 6 - (Screen_Width - ViewMargin_10 - searchEX))/(searchDY-20);
+//    CGFloat rateLeft = searchDX/(searchDY-20);
+    
+//    CGFloat rateRight = (Screen_Width - ViewMargin_10 * 6 - (Screen_Width - ViewMargin_10 - searchEX))/(searchDY-20);
+    
+    CGFloat rateRight = (Screen_Width - ViewMargin_10 * 6 - (Screen_Width - ViewMargin_10 - searchEX))/(searchDY);
     
     if (searchY <= StatusBarHeight+ViewMargin_5)
     {
@@ -230,11 +239,11 @@ static NSString *marketIdentifier = @"marketIdentifier";
     {
         self.searchView.y = searchY;
         
-        if (y > 0)
+        if (y > -BannerHeight)
         {
-            self.searchView.x = rateLeft*y+30;
+            self.searchView.x = rateLeft*(y+BannerHeight)+30;
             
-            self.searchView.width = Screen_Width - ViewMargin_10 * 6 - rateRight*y;
+            self.searchView.width = Screen_Width - ViewMargin_10 * 6 - rateRight*(y+BannerHeight);
         }else
         {
             self.searchView.x = 30;
@@ -243,16 +252,30 @@ static NSString *marketIdentifier = @"marketIdentifier";
         }
     }
     
-    if (y >= 0)
+    if (y >= -BannerHeight)
     {
-        self.navigationBarView.backgroundView.alpha = 0.005*y;
+        self.navigationBarView.backgroundView.alpha = 0.005*(y+BannerHeight);
         
-        self.navigationBarView.locateView.alpha = 0.5 - 0.005*y;
+        self.navigationBarView.locateView.alpha = 0.5 - 0.005*(y+BannerHeight);
     }else
     {
         self.navigationBarView.backgroundView.alpha = 0;
         
         self.navigationBarView.locateView.alpha = 0.5;
+    }
+    
+    if (y <= -BannerHeight)
+    {
+        self.headerView.y = y;
+        self.headerView.height = -y;
+        
+        _myTableView.contentInset = UIEdgeInsetsMake(BannerHeight, 0, 0, 0);
+    }else if (y <= 0)
+    {
+        _myTableView.contentInset = UIEdgeInsetsMake(BannerHeight, 0, 0, 0);
+    }else
+    {
+        _myTableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
     }
 }
 
