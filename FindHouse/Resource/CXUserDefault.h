@@ -11,4 +11,6 @@
 
 #define CX_LoginState_Default @"CX_LoginState_Default"
 
+#define CX_SearchHistory_Defaults @"CX_SearchHistory_Defaults"
+
 #endif /* CXUserDefault_h */
