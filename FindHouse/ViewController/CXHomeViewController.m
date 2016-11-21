@@ -15,6 +15,7 @@
 #import "CXSearchHouseViewController.h"
 #import "CXOpenCityViewController.h"
 #import "CXCalculatorViewController.h"
+#import "CXSearchViewController.h"
 
 #define BannerHeight (5*Screen_Width)/9
 
@@ -283,7 +284,7 @@ static NSString *marketIdentifier = @"marketIdentifier";
 
 - (void)searchAction
 {
-    CXSearchHouseViewController *searchVC = [[CXSearchHouseViewController alloc] init];
+    CXSearchViewController *searchVC = [[CXSearchViewController alloc] init];
     searchVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:searchVC animated:YES];
 }
@@ -307,7 +308,9 @@ static NSString *marketIdentifier = @"marketIdentifier";
     {
         case 0:
         {
-            
+            CXSearchHouseViewController *searchVC = [[CXSearchHouseViewController alloc] init];
+            searchVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:searchVC animated:YES];
         }
             break;
             

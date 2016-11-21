@@ -13,6 +13,7 @@
 #import "CXSearchHouseCell.h"
 #import "CXHouseDetailViewController.h"
 #import "CXHousePriceCustomFilterView.h"
+#import "CXHouseMoreFilterView.h"
 
 #define CellImageHeight (5*Screen_Width)/9
 
@@ -54,10 +55,9 @@ static NSString *cellIdentifier = @"cellIdentifier";
 @property(nonatomic,assign)NSInteger category3Section0Index;
 
 @property(nonatomic,retain)CXHousePriceCustomFilterView *priceFilterView;
+@property(nonatomic,retain)CXHouseMoreFilterView *moreFilterView;
 
 @property(nonatomic,retain)CXBaseTableView *myTableView;
-
-@property(nonatomic,retain)CXBaseView *moreView;
 
 @end
 
@@ -128,16 +128,6 @@ static NSString *cellIdentifier = @"cellIdentifier";
 }
 
 #pragma mark - Getter
-
-- (CXBaseView *)moreView
-{
-    if (!_moreView)
-    {
-        _moreView = [[CXBaseView alloc] init];
-    }
-    
-    return _moreView;
-}
 
 - (CXBaseView *)navigationBarView
 {
@@ -227,6 +217,17 @@ static NSString *cellIdentifier = @"cellIdentifier";
     }
     
     return _priceFilterView;
+}
+
+- (CXHouseMoreFilterView *)moreFilterView
+{
+    if (!_moreFilterView)
+    {
+        _moreFilterView = [[CXHouseMoreFilterView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 0) style:UITableViewStylePlain];
+        [_moreFilterView.commitButton addTarget:self action:@selector(moreFilterCommitAction) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    return _moreFilterView;
 }
 
 #pragma mark - YYDropDownMenuDataSource && YYDropDownMenuDelegte
@@ -576,7 +577,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
 {
     if (category == 3)
     {
-        return self.moreView;
+        return self.moreFilterView;
     }
     
     return nil;
@@ -586,7 +587,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
 {
     if (category == 3)
     {
-        return 200;
+        return self.myTableView.viewSizeHeight;
     }
     
     return 0;
@@ -642,6 +643,11 @@ static NSString *cellIdentifier = @"cellIdentifier";
     
     [self.filterMenu setCategoryString:self.priceFilterView.priceLabel.text categoryIndex:1];
     
+    [self.filterMenu hideMenuAndShowAgain:NO];
+}
+
+- (void)moreFilterCommitAction
+{
     [self.filterMenu hideMenuAndShowAgain:NO];
 }
 

@@ -12,6 +12,7 @@
 #import "CXHouseVerifyHeaderView.h"
 #import "CXHouseCommentCell.h"
 #import "CXHouseListCell.h"
+#import "CXContactSecretaryView.h"
 
 #define BottomBarHeight 50
 
@@ -40,6 +41,8 @@ static NSString *houseListCellIdentifier = @"houseListCellIdentifier";
 @property(nonatomic,retain)CXHouseVerifyHeaderView *houseVerifyHeaderView;
 @property(nonatomic,retain)CXInsetsField *mapHeaderView;
 @property(nonatomic,retain)CXInsetsField *moreHeaderView;
+
+@property(nonatomic,retain)CXContactSecretaryView *contactSecretaryView;
 
 @end
 
@@ -142,6 +145,7 @@ static NSString *houseListCellIdentifier = @"houseListCellIdentifier";
         [_secretaryButton setTitle:@"咨询房小蜜" forState:UIControlStateNormal];
         [_secretaryButton setTitleColor:CX_GrayColor forState:UIControlStateNormal];
         [_secretaryButton setImage:ImageWithNamed(@"house_contact_secretary") forState:UIControlStateNormal];
+        [_secretaryButton addTarget:self action:@selector(contactSecretaryAction) forControlEvents:UIControlEventTouchUpInside];
         
         _secretaryButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;//使图片和文字水平居中显示
         [_secretaryButton setTitleEdgeInsets:UIEdgeInsetsMake(_secretaryButton.imageView.frame.size.height+ViewMargin_5+3 ,-_secretaryButton.imageView.frame.size.width, 0.0,0.0)];//文字距离上边框的距离增加imageView的高度，距离左边框减少imageView的宽度，距离下边框和右边框距离不变
@@ -262,6 +266,16 @@ static NSString *houseListCellIdentifier = @"houseListCellIdentifier";
     return _moreHeaderView;
 }
 
+- (CXContactSecretaryView *)contactSecretaryView
+{
+    if (!_contactSecretaryView)
+    {
+        _contactSecretaryView = [[CXContactSecretaryView alloc] init];
+    }
+    
+    return _contactSecretaryView;
+}
+
 #pragma mark - UITableView Delegate && DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -380,5 +394,11 @@ static NSString *houseListCellIdentifier = @"houseListCellIdentifier";
     }
 }
 
+#pragma mark - Action
+
+- (void)contactSecretaryAction
+{
+    [self.contactSecretaryView show];
+}
 
 @end

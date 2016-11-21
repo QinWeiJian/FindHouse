@@ -97,6 +97,10 @@
 		6D8CEC0D1DD5BBEA0048F800 /* CXHouseTapLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CEC0C1DD5BBEA0048F800 /* CXHouseTapLabel.m */; };
 		6D8CEC101DD5C9A80048F800 /* CXHouseVerifyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CEC0F1DD5C9A70048F800 /* CXHouseVerifyHeaderView.m */; };
 		6D8CEC131DD5D3350048F800 /* CXHouseCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8CEC121DD5D3350048F800 /* CXHouseCommentCell.m */; };
+		6D8D64811DE29724009C4001 /* CXHouseMoreFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D64801DE29724009C4001 /* CXHouseMoreFilterView.m */; };
+		6D8D64841DE29ECD009C4001 /* CXMoreFilterCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D64831DE29ECD009C4001 /* CXMoreFilterCellView.m */; };
+		6D8D64871DE2D25B009C4001 /* CXContactSecretaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D64861DE2D25B009C4001 /* CXContactSecretaryView.m */; };
+		6D8D648B1DE2EBEE009C4001 /* CXSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D648A1DE2EBEE009C4001 /* CXSearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -280,6 +284,14 @@
 		6D8CEC0F1DD5C9A70048F800 /* CXHouseVerifyHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHouseVerifyHeaderView.m; sourceTree = "<group>"; };
 		6D8CEC111DD5D3340048F800 /* CXHouseCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHouseCommentCell.h; sourceTree = "<group>"; };
 		6D8CEC121DD5D3350048F800 /* CXHouseCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHouseCommentCell.m; sourceTree = "<group>"; };
+		6D8D647F1DE29724009C4001 /* CXHouseMoreFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHouseMoreFilterView.h; sourceTree = "<group>"; };
+		6D8D64801DE29724009C4001 /* CXHouseMoreFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHouseMoreFilterView.m; sourceTree = "<group>"; };
+		6D8D64821DE29ECD009C4001 /* CXMoreFilterCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMoreFilterCellView.h; sourceTree = "<group>"; };
+		6D8D64831DE29ECD009C4001 /* CXMoreFilterCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMoreFilterCellView.m; sourceTree = "<group>"; };
+		6D8D64851DE2D25B009C4001 /* CXContactSecretaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXContactSecretaryView.h; sourceTree = "<group>"; };
+		6D8D64861DE2D25B009C4001 /* CXContactSecretaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXContactSecretaryView.m; sourceTree = "<group>"; };
+		6D8D64891DE2EBEE009C4001 /* CXSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSearchViewController.h; sourceTree = "<group>"; };
+		6D8D648A1DE2EBEE009C4001 /* CXSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSearchViewController.m; sourceTree = "<group>"; };
 		A1859065457F7700C0A39F4F /* Pods-FindHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindHouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindHouse/Pods-FindHouse.release.xcconfig"; sourceTree = "<group>"; };
 		A8F3FF9331631B2039D0CA0F /* libPods-FindHouse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FindHouse.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -434,6 +446,7 @@
 		6D3C006F1DD028120029A37F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6D8D64881DE2EBD8009C4001 /* 搜索 */,
 				6D5EC2B91DDC0352008A6F5B /* 我的收藏 */,
 				6D87BFE41DDAAC060056B352 /* 计算器 */,
 				6D727F9D1DD99CC800B2E856 /* 设置 */,
@@ -441,7 +454,7 @@
 				6D8CEC031DD569890048F800 /* 房源详情 */,
 				6D3435811DD46D2B00EF90E3 /* 登录 */,
 				6D34357D1DD45A9F00EF90E3 /* 开通城市 */,
-				6D3C00B11DD095980029A37F /* 搜索 */,
+				6D3C00B11DD095980029A37F /* 买房 */,
 				6D3C00761DD02A250029A37F /* 我的 */,
 				6D3C00751DD02A1F0029A37F /* 消息 */,
 				6D3C00741DD02A160029A37F /* 首页 */,
@@ -545,14 +558,14 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		6D3C00B11DD095980029A37F /* 搜索 */ = {
+		6D3C00B11DD095980029A37F /* 买房 */ = {
 			isa = PBXGroup;
 			children = (
 				6D3C00B51DD099CB0029A37F /* View */,
 				6D3C00B21DD095A80029A37F /* CXSearchHouseViewController.h */,
 				6D3C00B31DD095A80029A37F /* CXSearchHouseViewController.m */,
 			);
-			name = "搜索";
+			name = "买房";
 			sourceTree = "<group>";
 		};
 		6D3C00B51DD099CB0029A37F /* View */ = {
@@ -564,6 +577,10 @@
 				6D34357B1DD4478D00EF90E3 /* CXSearchHouseCell.m */,
 				6D5EC2C31DDC3270008A6F5B /* CXHousePriceCustomFilterView.h */,
 				6D5EC2C41DDC3270008A6F5B /* CXHousePriceCustomFilterView.m */,
+				6D8D647F1DE29724009C4001 /* CXHouseMoreFilterView.h */,
+				6D8D64801DE29724009C4001 /* CXHouseMoreFilterView.m */,
+				6D8D64821DE29ECD009C4001 /* CXMoreFilterCellView.h */,
+				6D8D64831DE29ECD009C4001 /* CXMoreFilterCellView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -767,8 +784,19 @@
 				6D8CEC121DD5D3350048F800 /* CXHouseCommentCell.m */,
 				6D727F931DD96A3C00B2E856 /* CXHouseListCell.h */,
 				6D727F941DD96A3C00B2E856 /* CXHouseListCell.m */,
+				6D8D64851DE2D25B009C4001 /* CXContactSecretaryView.h */,
+				6D8D64861DE2D25B009C4001 /* CXContactSecretaryView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		6D8D64881DE2EBD8009C4001 /* 搜索 */ = {
+			isa = PBXGroup;
+			children = (
+				6D8D64891DE2EBEE009C4001 /* CXSearchViewController.h */,
+				6D8D648A1DE2EBEE009C4001 /* CXSearchViewController.m */,
+			);
+			name = "搜索";
 			sourceTree = "<group>";
 		};
 		A0A8EBD8F0A68FCBCF9A1770 /* Pods */ = {
@@ -905,6 +933,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D8D64841DE29ECD009C4001 /* CXMoreFilterCellView.m in Sources */,
 				6D3C006B1DD023020029A37F /* TPKeyboardAvoidingScrollView.m in Sources */,
 				6D3C006C1DD023020029A37F /* TPKeyboardAvoidingTableView.m in Sources */,
 				6D8CEC131DD5D3350048F800 /* CXHouseCommentCell.m in Sources */,
@@ -939,6 +968,7 @@
 				6D5EC2C51DDC3270008A6F5B /* CXHousePriceCustomFilterView.m in Sources */,
 				6D3C006A1DD023020029A37F /* JSONKit.m in Sources */,
 				6D3C005E1DD023020029A37F /* YYViewPicturesZoomScrollView.m in Sources */,
+				6D8D648B1DE2EBEE009C4001 /* CXSearchViewController.m in Sources */,
 				6D3C00541DD023020029A37F /* UIView+CXView.m in Sources */,
 				6D34357C1DD4478D00EF90E3 /* CXSearchHouseCell.m in Sources */,
 				6D3C00481DD023020029A37F /* CXBaseLabel.m in Sources */,
@@ -980,6 +1010,7 @@
 				6D3CFFD01DD0209C0029A37F /* main.m in Sources */,
 				6D3C007F1DD02A4B0029A37F /* CXMineViewController.m in Sources */,
 				6D3C004B1DD023020029A37F /* CXBaseTableView.m in Sources */,
+				6D8D64811DE29724009C4001 /* CXHouseMoreFilterView.m in Sources */,
 				6D87BFF11DDABBDF0056B352 /* CXCalculatorUpDownLabel.m in Sources */,
 				6D8CEC0D1DD5BBEA0048F800 /* CXHouseTapLabel.m in Sources */,
 				6D3C00531DD023020029A37F /* UIImageView+CXWebImageView.m in Sources */,
@@ -990,6 +1021,7 @@
 				6D3C008C1DD05F780029A37F /* CXLeftImageFunctionView.m in Sources */,
 				6D3C00AC1DD081990029A37F /* CXMineNormalCell.m in Sources */,
 				6D3C00491DD023020029A37F /* CXBaseNavigationController.m in Sources */,
+				6D8D64871DE2D25B009C4001 /* CXContactSecretaryView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

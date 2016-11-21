@@ -11,6 +11,4 @@
 
 #define CX_LoginState_Default @"CX_LoginState_Default"
 
-#define CX_WelfareCustomTags_Default @"CX_WelfareCustomTags_Default"
-
 #endif /* CXUserDefault_h */

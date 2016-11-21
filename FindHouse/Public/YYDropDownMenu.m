@@ -94,6 +94,8 @@
     {
         [self.layer addSublayer:[CXGlobalTool cx_drawSeparatorLineWithColor:CX_LightGrayColor andStartPosition:CGPointMake(categoryWidth+i*categoryWidth, self.viewSizeHeight/4) endPosition:CGPointMake(categoryWidth+i*categoryWidth, self.viewSizeHeight*3/4) LineWidth:1]];
     }
+    
+    [self.layer addSublayer:[CXGlobalTool cx_drawSeparatorLineWithColor:CX_LightGrayColor andStartPosition:CGPointMake(0, self.viewSizeHeight) endPosition:CGPointMake(self.viewSizeWidth, self.viewSizeHeight) LineWidth:1]];
 }
 
 #pragma mark - Getter
@@ -323,7 +325,7 @@
     {
         CGFloat menuHeight = [self.dataSource yy_dropDownMenu:self heightForCustomMenuInCategory:self.currentSelectedIndex];
         
-        menuHeight = menuHeight > (Screen_Height-self.categoryHeight-StatusNavigationBarHeight) ? (Screen_Height-self.categoryHeight-StatusNavigationBarHeight) : menuHeight;
+        menuHeight = menuHeight >= (Screen_Height-self.categoryHeight-StatusNavigationBarHeight) ? (Screen_Height-self.categoryHeight-StatusNavigationBarHeight) : menuHeight;
         
         UIView *customMenu = [self.dataSource yy_dropDownMenu:self viewForCustomMenuInCategory:self.currentSelectedIndex];
         
@@ -347,7 +349,7 @@
                         
             NSInteger row = [self.dataSource yy_dropDownMenu:self numberOfRowInCategory:self.currentSelectedIndex section:0];
             
-            CGFloat tableviewHeight = row*RowHeight+footerHeight > (Screen_Height-self.categoryHeight-StatusNavigationBarHeight) ? (Screen_Height-self.categoryHeight-StatusNavigationBarHeight) : row*RowHeight+footerHeight;
+            CGFloat tableviewHeight = row*RowHeight+footerHeight >= (Screen_Height-self.categoryHeight-StatusNavigationBarHeight) ? (Screen_Height-self.categoryHeight-StatusNavigationBarHeight) : row*RowHeight+footerHeight;
             
             self.myTableView0.hidden = NO;
             self.myTableView1.hidden = YES;
