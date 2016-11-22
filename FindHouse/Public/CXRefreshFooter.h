@@ -8,6 +8,6 @@
 
 #import <MJRefresh/MJRefresh.h>
 
-@interface CXRefreshFooter : MJRefreshBackGifFooter
+@interface CXRefreshFooter : MJRefreshAutoGifFooter
 
 @end

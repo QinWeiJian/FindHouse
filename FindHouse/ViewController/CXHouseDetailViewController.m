@@ -13,6 +13,7 @@
 #import "CXHouseCommentCell.h"
 #import "CXHouseListCell.h"
 #import "CXContactSecretaryView.h"
+#import "CXReportHouseViewController.h"
 
 #define BottomBarHeight 50
 
@@ -233,6 +234,7 @@ static NSString *houseListCellIdentifier = @"houseListCellIdentifier";
     if (!_houseVerifyHeaderView)
     {
         _houseVerifyHeaderView = [[CXHouseVerifyHeaderView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 45)];
+        [_houseVerifyHeaderView.reportButton addTarget:self action:@selector(reportAction) forControlEvents:UIControlEventTouchUpInside];
     }
     
     return _houseVerifyHeaderView;
@@ -399,6 +401,12 @@ static NSString *houseListCellIdentifier = @"houseListCellIdentifier";
 - (void)contactSecretaryAction
 {
     [self.contactSecretaryView show];
+}
+
+- (void)reportAction
+{
+    CXReportHouseViewController *reportVC = [[CXReportHouseViewController alloc] init];
+    [self.navigationController pushViewController:reportVC animated:YES];
 }
 
 @end

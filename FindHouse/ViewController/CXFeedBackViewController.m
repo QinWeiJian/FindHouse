@@ -50,6 +50,7 @@
         _feedView = [[UIPlaceHolderTextView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 200)];
         _feedView.backgroundColor = CX_WhiteColor;
         _feedView.font = FontSize(14);
+        _feedView.textColor = CX_BlackColor;
         _feedView.placeholder = @"您的意见或建议";
     }
     

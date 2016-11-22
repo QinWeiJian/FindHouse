@@ -8,6 +8,7 @@
 
 #import "CXSearchViewController.h"
 #import "CXSearchView.h"
+#import "CXSearchResultViewController.h"
 
 #define CellHeight 45
 
@@ -26,7 +27,7 @@ static NSString *searchCellIdentifier = @"searchCellIdentifier";
 @property(nonatomic,retain)UIButton *clearButton;
 
 @property(nonatomic,retain)NSMutableArray *historyArray;
-@property(nonatomic,retain)NSString *searchString;
+@property(nonatomic,copy)NSString *searchString;
 
 @end
 
@@ -102,6 +103,14 @@ static NSString *searchCellIdentifier = @"searchCellIdentifier";
     [self.searchTableView reloadData];
     
     //        NSLog(@"%@",self.historyDict);
+}
+
+- (void)goSearch
+{
+    CXSearchResultViewController *resultVC = [[CXSearchResultViewController alloc] init];
+    resultVC.title = self.searchString;
+    resultVC.searchString = self.searchString;
+    [self.navigationController pushViewController:resultVC animated:YES];
 }
 
 #pragma mark - Getter
@@ -227,7 +236,7 @@ static NSString *searchCellIdentifier = @"searchCellIdentifier";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:searchCellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:searchCellIdentifier]; 
     
     cell.textLabel.font = FontSize(14);
     cell.textLabel.textColor = CX_BlackColor;
@@ -270,6 +279,10 @@ static NSString *searchCellIdentifier = @"searchCellIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    self.searchString = [self.historyArray objectAtIndex:self.historyArray.count-1-indexPath.row];
+    
+    [self goSearch];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -281,6 +294,8 @@ static NSString *searchCellIdentifier = @"searchCellIdentifier";
     if (string.length > 0)
     {
         [self saveHistory];
+        
+        [self goSearch];
     }
     
     return [textField resignFirstResponder];

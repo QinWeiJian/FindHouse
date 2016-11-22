@@ -16,6 +16,7 @@
 #import "CXOpenCityViewController.h"
 #import "CXCalculatorViewController.h"
 #import "CXSearchViewController.h"
+#import "CXSaleHouseViewController.h"
 
 #define BannerHeight (5*Screen_Width)/9
 
@@ -316,7 +317,9 @@ static NSString *marketIdentifier = @"marketIdentifier";
             
         case 1:
         {
-            
+            CXSaleHouseViewController *saleVC = [[CXSaleHouseViewController alloc] init];
+            saleVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:saleVC animated:YES];
         }
             break;
             

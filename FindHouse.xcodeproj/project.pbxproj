@@ -76,12 +76,17 @@
 		6D5EC2BC1DDC039C008A6F5B /* CXMyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5EC2BB1DDC039C008A6F5B /* CXMyCollectionViewController.m */; };
 		6D5EC2C51DDC3270008A6F5B /* CXHousePriceCustomFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5EC2C41DDC3270008A6F5B /* CXHousePriceCustomFilterView.m */; };
 		6D5EC2C91DDC3B23008A6F5B /* MARKRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5EC2C81DDC3B23008A6F5B /* MARKRangeSlider.m */; };
+		6D7203D41DE4447D0050C2AE /* CXReportHouseCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7203D31DE4447D0050C2AE /* CXReportHouseCellView.m */; };
 		6D727F951DD96A3C00B2E856 /* CXHouseListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D727F941DD96A3C00B2E856 /* CXHouseListCell.m */; };
 		6D727F981DD995BB00B2E856 /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D727F971DD995BB00B2E856 /* UIPlaceHolderTextView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6D727F9C1DD995F500B2E856 /* CXFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D727F9B1DD995F500B2E856 /* CXFeedBackViewController.m */; };
 		6D727FA01DD99CD300B2E856 /* CXSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D727F9F1DD99CD300B2E856 /* CXSettingViewController.m */; };
 		6D727FA41DD99DD800B2E856 /* CXDetailLabelCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D727FA31DD99DD800B2E856 /* CXDetailLabelCellView.m */; };
 		6D727FA71DD99DE600B2E856 /* CXSwitchCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D727FA61DD99DE600B2E856 /* CXSwitchCellView.m */; };
+		6D7E4EE21DE3ED2300457EB2 /* CXSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7E4EE11DE3ED2300457EB2 /* CXSearchResultViewController.m */; };
+		6D7E4EE61DE3F43300457EB2 /* CXSaleHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7E4EE51DE3F43300457EB2 /* CXSaleHouseViewController.m */; };
+		6D7E4EEA1DE41A1A00457EB2 /* CXSaleHouseCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7E4EE91DE41A1A00457EB2 /* CXSaleHouseCellView.m */; };
+		6D7E4EEE1DE42AAA00457EB2 /* CXReportHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7E4EED1DE42AAA00457EB2 /* CXReportHouseViewController.m */; };
 		6D87BFE71DDAADC40056B352 /* CXSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D87BFE61DDAADC40056B352 /* CXSegmentView.m */; };
 		6D87BFEA1DDAB3680056B352 /* CXCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D87BFE91DDAB3680056B352 /* CXCalculatorViewController.m */; };
 		6D87BFEE1DDABBC70056B352 /* CXCalculatorHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D87BFED1DDABBC70056B352 /* CXCalculatorHeadView.m */; };
@@ -244,6 +249,8 @@
 		6D5EC2C41DDC3270008A6F5B /* CXHousePriceCustomFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHousePriceCustomFilterView.m; sourceTree = "<group>"; };
 		6D5EC2C71DDC3B23008A6F5B /* MARKRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARKRangeSlider.h; sourceTree = "<group>"; };
 		6D5EC2C81DDC3B23008A6F5B /* MARKRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARKRangeSlider.m; sourceTree = "<group>"; };
+		6D7203D21DE4447D0050C2AE /* CXReportHouseCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXReportHouseCellView.h; sourceTree = "<group>"; };
+		6D7203D31DE4447D0050C2AE /* CXReportHouseCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXReportHouseCellView.m; sourceTree = "<group>"; };
 		6D727F931DD96A3C00B2E856 /* CXHouseListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHouseListCell.h; sourceTree = "<group>"; };
 		6D727F941DD96A3C00B2E856 /* CXHouseListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHouseListCell.m; sourceTree = "<group>"; };
 		6D727F961DD995BB00B2E856 /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
@@ -256,6 +263,14 @@
 		6D727FA31DD99DD800B2E856 /* CXDetailLabelCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDetailLabelCellView.m; sourceTree = "<group>"; };
 		6D727FA51DD99DE600B2E856 /* CXSwitchCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSwitchCellView.h; sourceTree = "<group>"; };
 		6D727FA61DD99DE600B2E856 /* CXSwitchCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSwitchCellView.m; sourceTree = "<group>"; };
+		6D7E4EE01DE3ED2300457EB2 /* CXSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSearchResultViewController.h; sourceTree = "<group>"; };
+		6D7E4EE11DE3ED2300457EB2 /* CXSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSearchResultViewController.m; sourceTree = "<group>"; };
+		6D7E4EE41DE3F43300457EB2 /* CXSaleHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSaleHouseViewController.h; sourceTree = "<group>"; };
+		6D7E4EE51DE3F43300457EB2 /* CXSaleHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSaleHouseViewController.m; sourceTree = "<group>"; };
+		6D7E4EE81DE41A1A00457EB2 /* CXSaleHouseCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSaleHouseCellView.h; sourceTree = "<group>"; };
+		6D7E4EE91DE41A1A00457EB2 /* CXSaleHouseCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSaleHouseCellView.m; sourceTree = "<group>"; };
+		6D7E4EEC1DE42AAA00457EB2 /* CXReportHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXReportHouseViewController.h; sourceTree = "<group>"; };
+		6D7E4EED1DE42AAA00457EB2 /* CXReportHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXReportHouseViewController.m; sourceTree = "<group>"; };
 		6D87BFE51DDAADC40056B352 /* CXSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSegmentView.h; sourceTree = "<group>"; };
 		6D87BFE61DDAADC40056B352 /* CXSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSegmentView.m; sourceTree = "<group>"; };
 		6D87BFE81DDAB3680056B352 /* CXCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXCalculatorViewController.h; sourceTree = "<group>"; };
@@ -446,6 +461,9 @@
 		6D3C006F1DD028120029A37F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6D7E4EEB1DE42A9700457EB2 /* 举报房源 */,
+				6D7E4EE31DE3F41600457EB2 /* 卖房 */,
+				6D7E4EDF1DE3ED0E00457EB2 /* 搜索结果 */,
 				6D8D64881DE2EBD8009C4001 /* 搜索 */,
 				6D5EC2B91DDC0352008A6F5B /* 我的收藏 */,
 				6D87BFE41DDAAC060056B352 /* 计算器 */,
@@ -693,6 +711,15 @@
 			path = MARKRangeSlider;
 			sourceTree = "<group>";
 		};
+		6D7203CE1DE444260050C2AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D7203D21DE4447D0050C2AE /* CXReportHouseCellView.h */,
+				6D7203D31DE4447D0050C2AE /* CXReportHouseCellView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		6D727F991DD995E500B2E856 /* 意见反馈 */ = {
 			isa = PBXGroup;
 			children = (
@@ -721,6 +748,44 @@
 				6D727FA61DD99DE600B2E856 /* CXSwitchCellView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		6D7E4EDF1DE3ED0E00457EB2 /* 搜索结果 */ = {
+			isa = PBXGroup;
+			children = (
+				6D7E4EE01DE3ED2300457EB2 /* CXSearchResultViewController.h */,
+				6D7E4EE11DE3ED2300457EB2 /* CXSearchResultViewController.m */,
+			);
+			name = "搜索结果";
+			sourceTree = "<group>";
+		};
+		6D7E4EE31DE3F41600457EB2 /* 卖房 */ = {
+			isa = PBXGroup;
+			children = (
+				6D7E4EE71DE419F000457EB2 /* View */,
+				6D7E4EE41DE3F43300457EB2 /* CXSaleHouseViewController.h */,
+				6D7E4EE51DE3F43300457EB2 /* CXSaleHouseViewController.m */,
+			);
+			name = "卖房";
+			sourceTree = "<group>";
+		};
+		6D7E4EE71DE419F000457EB2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D7E4EE81DE41A1A00457EB2 /* CXSaleHouseCellView.h */,
+				6D7E4EE91DE41A1A00457EB2 /* CXSaleHouseCellView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6D7E4EEB1DE42A9700457EB2 /* 举报房源 */ = {
+			isa = PBXGroup;
+			children = (
+				6D7203CE1DE444260050C2AE /* View */,
+				6D7E4EEC1DE42AAA00457EB2 /* CXReportHouseViewController.h */,
+				6D7E4EED1DE42AAA00457EB2 /* CXReportHouseViewController.m */,
+			);
+			name = "举报房源";
 			sourceTree = "<group>";
 		};
 		6D87BFE41DDAAC060056B352 /* 计算器 */ = {
@@ -939,6 +1004,7 @@
 				6D8CEC131DD5D3350048F800 /* CXHouseCommentCell.m in Sources */,
 				6D87C0001DDAE6640056B352 /* CXCalculatorPriceView.m in Sources */,
 				6D87C0211DDB0C080056B352 /* UITableViewRowAction+JZExtension.m in Sources */,
+				6D7E4EEE1DE42AAA00457EB2 /* CXReportHouseViewController.m in Sources */,
 				6D3435801DD45ADA00EF90E3 /* CXOpenCityViewController.m in Sources */,
 				6D3C00571DD023020029A37F /* CXAddImageView.m in Sources */,
 				6D3C005A1DD023020029A37F /* CXUserInfoDataModel.m in Sources */,
@@ -953,6 +1019,7 @@
 				6D727F9C1DD995F500B2E856 /* CXFeedBackViewController.m in Sources */,
 				6D3C00B01DD08ACF0029A37F /* CXMessageNormalCell.m in Sources */,
 				6D3C004E1DD023020029A37F /* CXBaseView.m in Sources */,
+				6D7E4EE61DE3F43300457EB2 /* CXSaleHouseViewController.m in Sources */,
 				6D3435771DD4219600EF90E3 /* YYAreaDataModel.m in Sources */,
 				6D727FA01DD99CD300B2E856 /* CXSettingViewController.m in Sources */,
 				6D3C00561DD023020029A37F /* CXAddImageSingleView.m in Sources */,
@@ -981,6 +1048,7 @@
 				6D3C004C1DD023020029A37F /* CXBaseTableViewCell.m in Sources */,
 				6D3C004D1DD023020029A37F /* CXBaseTextField.m in Sources */,
 				6D3C00731DD029340029A37F /* CXRootViewController.m in Sources */,
+				6D7203D41DE4447D0050C2AE /* CXReportHouseCellView.m in Sources */,
 				6D3C004F1DD023020029A37F /* CXBaseViewController.m in Sources */,
 				6D3C00511DD023020029A37F /* NSMutableDictionary+CXMutableDictionary.m in Sources */,
 				6D3C009F1DD06F850029A37F /* CXHomeCityMarketCell.m in Sources */,
@@ -1001,6 +1069,7 @@
 				6D3C00B41DD095A80029A37F /* CXSearchHouseViewController.m in Sources */,
 				6D87BFEA1DDAB3680056B352 /* CXCalculatorViewController.m in Sources */,
 				6D87C0061DDAEEEF0056B352 /* CXDetailTextFieldCell.m in Sources */,
+				6D7E4EE21DE3ED2300457EB2 /* CXSearchResultViewController.m in Sources */,
 				6D3C00631DD023020029A37F /* GWLPhotoGroupTableViewController.m in Sources */,
 				6D3C00A91DD07F1F0029A37F /* CXMineHeaderView.m in Sources */,
 				6D3C00961DD066260029A37F /* CXGetDataTool.m in Sources */,
@@ -1018,6 +1087,7 @@
 				6D3C00831DD031B20029A37F /* CXHomeNavigationBarView.m in Sources */,
 				6D1D6D831DDD8680009F050F /* CXRefreshFooter.m in Sources */,
 				6D3435841DD46D4500EF90E3 /* CXLoginViewController.m in Sources */,
+				6D7E4EEA1DE41A1A00457EB2 /* CXSaleHouseCellView.m in Sources */,
 				6D3C008C1DD05F780029A37F /* CXLeftImageFunctionView.m in Sources */,
 				6D3C00AC1DD081990029A37F /* CXMineNormalCell.m in Sources */,
 				6D3C00491DD023020029A37F /* CXBaseNavigationController.m in Sources */,
