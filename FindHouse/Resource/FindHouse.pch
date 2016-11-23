@@ -58,6 +58,7 @@
 
 #define ViewMargin_5 5
 #define ViewMargin_10 10
+#define ViewMargin_15 15
 #define ViewMargin_Double_10 20
 #define TabBarHeight 49
 #define StatusNavigationBarHeight 64

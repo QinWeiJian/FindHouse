@@ -42,7 +42,7 @@
 {
     if (!_deleteButton)
     {
-        UIImage *deleteImage = ImageWithNamed(@"cx_publish_delete");;
+        UIImage *deleteImage = ImageWithNamed(@"uploadImage_delete");;
         
         _deleteButton = [[UIButton alloc] initWithFrame:CGRectMake(self.viewSizeWidth-deleteImage.size.width, 0, deleteImage.size.width, deleteImage.size.height)];
         [_deleteButton setImage:deleteImage forState:UIControlStateNormal];

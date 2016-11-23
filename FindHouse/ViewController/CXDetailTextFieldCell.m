@@ -29,7 +29,7 @@
 {
     if (!_titleLabel)
     {
-        _titleLabel = [[CXBaseLabel alloc] initWithFrame:CGRectMake(ViewMargin_10, 0, Screen_Width/2-ViewMargin_Double_10, CellHeight)];
+        _titleLabel = [[CXBaseLabel alloc] initWithFrame:CGRectMake(ViewMargin_15, 0, Screen_Width/2-ViewMargin_15-ViewMargin_10, CellHeight)];
     }
     
     return _titleLabel;

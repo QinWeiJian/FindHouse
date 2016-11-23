@@ -14,6 +14,8 @@
 
 - (void)cx_addImageViewAddAction:(CXAddImageView *)addView;
 
+- (void)cx_addImageViewDidDeleteImage:(CXAddImageView *)addView;
+
 @end
 
 @interface CXAddImageView : UIScrollView

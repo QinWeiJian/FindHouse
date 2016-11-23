@@ -106,6 +106,12 @@
 		6D8D64841DE29ECD009C4001 /* CXMoreFilterCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D64831DE29ECD009C4001 /* CXMoreFilterCellView.m */; };
 		6D8D64871DE2D25B009C4001 /* CXContactSecretaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D64861DE2D25B009C4001 /* CXContactSecretaryView.m */; };
 		6D8D648B1DE2EBEE009C4001 /* CXSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8D648A1DE2EBEE009C4001 /* CXSearchViewController.m */; };
+		6D9D586C1DE53A5D00C4EB3D /* CXPublichSaleHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D586B1DE53A5D00C4EB3D /* CXPublichSaleHouseViewController.m */; };
+		6D9D586F1DE568A200C4EB3D /* ImageTextButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D586E1DE568A200C4EB3D /* ImageTextButton.m */; };
+		6D9D58731DE56C1500C4EB3D /* CXHouseSalePointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D58721DE56C1500C4EB3D /* CXHouseSalePointView.m */; };
+		6D9D58761DE570D400C4EB3D /* CXSaleHouseNormalInputCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D58751DE570D400C4EB3D /* CXSaleHouseNormalInputCellView.m */; };
+		6D9D58791DE5788200C4EB3D /* CXSaleHouseChooseCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D58781DE5788200C4EB3D /* CXSaleHouseChooseCellView.m */; };
+		6D9D587C1DE57C3300C4EB3D /* CXSaleHouseFloorCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9D587B1DE57C3300C4EB3D /* CXSaleHouseFloorCellView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -307,6 +313,18 @@
 		6D8D64861DE2D25B009C4001 /* CXContactSecretaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXContactSecretaryView.m; sourceTree = "<group>"; };
 		6D8D64891DE2EBEE009C4001 /* CXSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSearchViewController.h; sourceTree = "<group>"; };
 		6D8D648A1DE2EBEE009C4001 /* CXSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSearchViewController.m; sourceTree = "<group>"; };
+		6D9D586A1DE53A5D00C4EB3D /* CXPublichSaleHouseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXPublichSaleHouseViewController.h; sourceTree = "<group>"; };
+		6D9D586B1DE53A5D00C4EB3D /* CXPublichSaleHouseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXPublichSaleHouseViewController.m; sourceTree = "<group>"; };
+		6D9D586D1DE568A200C4EB3D /* ImageTextButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTextButton.h; sourceTree = "<group>"; };
+		6D9D586E1DE568A200C4EB3D /* ImageTextButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTextButton.m; sourceTree = "<group>"; };
+		6D9D58711DE56C1500C4EB3D /* CXHouseSalePointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHouseSalePointView.h; sourceTree = "<group>"; };
+		6D9D58721DE56C1500C4EB3D /* CXHouseSalePointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHouseSalePointView.m; sourceTree = "<group>"; };
+		6D9D58741DE570D400C4EB3D /* CXSaleHouseNormalInputCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSaleHouseNormalInputCellView.h; sourceTree = "<group>"; };
+		6D9D58751DE570D400C4EB3D /* CXSaleHouseNormalInputCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSaleHouseNormalInputCellView.m; sourceTree = "<group>"; };
+		6D9D58771DE5788200C4EB3D /* CXSaleHouseChooseCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSaleHouseChooseCellView.h; sourceTree = "<group>"; };
+		6D9D58781DE5788200C4EB3D /* CXSaleHouseChooseCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSaleHouseChooseCellView.m; sourceTree = "<group>"; };
+		6D9D587A1DE57C3300C4EB3D /* CXSaleHouseFloorCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSaleHouseFloorCellView.h; sourceTree = "<group>"; };
+		6D9D587B1DE57C3300C4EB3D /* CXSaleHouseFloorCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSaleHouseFloorCellView.m; sourceTree = "<group>"; };
 		A1859065457F7700C0A39F4F /* Pods-FindHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindHouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-FindHouse/Pods-FindHouse.release.xcconfig"; sourceTree = "<group>"; };
 		A8F3FF9331631B2039D0CA0F /* libPods-FindHouse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FindHouse.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -362,6 +380,8 @@
 		6D3C00091DD023020029A37F /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				6D9D586D1DE568A200C4EB3D /* ImageTextButton.h */,
+				6D9D586E1DE568A200C4EB3D /* ImageTextButton.m */,
 				6D727F961DD995BB00B2E856 /* UIPlaceHolderTextView.h */,
 				6D727F971DD995BB00B2E856 /* UIPlaceHolderTextView.m */,
 				6D3435751DD4219600EF90E3 /* YYAreaDataModel.h */,
@@ -461,6 +481,7 @@
 		6D3C006F1DD028120029A37F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6D9D58691DE53A4500C4EB3D /* 发布卖房 */,
 				6D7E4EEB1DE42A9700457EB2 /* 举报房源 */,
 				6D7E4EE31DE3F41600457EB2 /* 卖房 */,
 				6D7E4EDF1DE3ED0E00457EB2 /* 搜索结果 */,
@@ -864,6 +885,31 @@
 			name = "搜索";
 			sourceTree = "<group>";
 		};
+		6D9D58691DE53A4500C4EB3D /* 发布卖房 */ = {
+			isa = PBXGroup;
+			children = (
+				6D9D58701DE56C0200C4EB3D /* View */,
+				6D9D586A1DE53A5D00C4EB3D /* CXPublichSaleHouseViewController.h */,
+				6D9D586B1DE53A5D00C4EB3D /* CXPublichSaleHouseViewController.m */,
+			);
+			name = "发布卖房";
+			sourceTree = "<group>";
+		};
+		6D9D58701DE56C0200C4EB3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D9D58711DE56C1500C4EB3D /* CXHouseSalePointView.h */,
+				6D9D58721DE56C1500C4EB3D /* CXHouseSalePointView.m */,
+				6D9D58741DE570D400C4EB3D /* CXSaleHouseNormalInputCellView.h */,
+				6D9D58751DE570D400C4EB3D /* CXSaleHouseNormalInputCellView.m */,
+				6D9D58771DE5788200C4EB3D /* CXSaleHouseChooseCellView.h */,
+				6D9D58781DE5788200C4EB3D /* CXSaleHouseChooseCellView.m */,
+				6D9D587A1DE57C3300C4EB3D /* CXSaleHouseFloorCellView.h */,
+				6D9D587B1DE57C3300C4EB3D /* CXSaleHouseFloorCellView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		A0A8EBD8F0A68FCBCF9A1770 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1001,6 +1047,7 @@
 				6D8D64841DE29ECD009C4001 /* CXMoreFilterCellView.m in Sources */,
 				6D3C006B1DD023020029A37F /* TPKeyboardAvoidingScrollView.m in Sources */,
 				6D3C006C1DD023020029A37F /* TPKeyboardAvoidingTableView.m in Sources */,
+				6D9D58791DE5788200C4EB3D /* CXSaleHouseChooseCellView.m in Sources */,
 				6D8CEC131DD5D3350048F800 /* CXHouseCommentCell.m in Sources */,
 				6D87C0001DDAE6640056B352 /* CXCalculatorPriceView.m in Sources */,
 				6D87C0211DDB0C080056B352 /* UITableViewRowAction+JZExtension.m in Sources */,
@@ -1011,6 +1058,7 @@
 				6D3C00791DD02A3E0029A37F /* CXHomeViewController.m in Sources */,
 				6D1D6D7A1DDD53D5009F050F /* CXRefreshHeader.m in Sources */,
 				6D5EC2C91DDC3B23008A6F5B /* MARKRangeSlider.m in Sources */,
+				6D9D587C1DE57C3300C4EB3D /* CXSaleHouseFloorCellView.m in Sources */,
 				6D3C005B1DD023020029A37F /* RunImageScrollView.m in Sources */,
 				6D3C00641DD023020029A37F /* GWLPhotoLibrayController.m in Sources */,
 				6D3435741DD4166400EF90E3 /* YYDropDownMenu.m in Sources */,
@@ -1040,6 +1088,7 @@
 				6D34357C1DD4478D00EF90E3 /* CXSearchHouseCell.m in Sources */,
 				6D3C00481DD023020029A37F /* CXBaseLabel.m in Sources */,
 				6D87BFE71DDAADC40056B352 /* CXSegmentView.m in Sources */,
+				6D9D58731DE56C1500C4EB3D /* CXHouseSalePointView.m in Sources */,
 				6D3C009C1DD068870029A37F /* CXUpImageFunctionView.m in Sources */,
 				6D3435881DD4863D00EF90E3 /* CXLoginInputView.m in Sources */,
 				6D3C007C1DD02A450029A37F /* CXMessageViewController.m in Sources */,
@@ -1055,6 +1104,7 @@
 				6D87C0201DDB0C080056B352 /* UITableViewCell+JZExtension.m in Sources */,
 				6D3C00581DD023020029A37F /* CXInsetsField.m in Sources */,
 				6D727F951DD96A3C00B2E856 /* CXHouseListCell.m in Sources */,
+				6D9D58761DE570D400C4EB3D /* CXSaleHouseNormalInputCellView.m in Sources */,
 				6D3C00991DD066260029A37F /* CXProcessDataTool.m in Sources */,
 				6D8CEC0A1DD5A89C0048F800 /* CXHouseMessageCell.m in Sources */,
 				6D87C0031DDAEED10056B352 /* CXDetailDisclosureIndicatorCell.m in Sources */,
@@ -1065,6 +1115,7 @@
 				6D727FA41DD99DD800B2E856 /* CXDetailLabelCellView.m in Sources */,
 				6D3C00461DD023020029A37F /* CXBaseDataModel.m in Sources */,
 				6D3C00621DD023020029A37F /* GWLPhotoGroupDetailController.m in Sources */,
+				6D9D586C1DE53A5D00C4EB3D /* CXPublichSaleHouseViewController.m in Sources */,
 				6D1D6D801DDD824F009F050F /* CXProgressHud.m in Sources */,
 				6D3C00B41DD095A80029A37F /* CXSearchHouseViewController.m in Sources */,
 				6D87BFEA1DDAB3680056B352 /* CXCalculatorViewController.m in Sources */,
@@ -1077,6 +1128,7 @@
 				6D3C00971DD066260029A37F /* CXGlobalTool.m in Sources */,
 				6D8CEC101DD5C9A80048F800 /* CXHouseVerifyHeaderView.m in Sources */,
 				6D3CFFD01DD0209C0029A37F /* main.m in Sources */,
+				6D9D586F1DE568A200C4EB3D /* ImageTextButton.m in Sources */,
 				6D3C007F1DD02A4B0029A37F /* CXMineViewController.m in Sources */,
 				6D3C004B1DD023020029A37F /* CXBaseTableView.m in Sources */,
 				6D8D64811DE29724009C4001 /* CXHouseMoreFilterView.m in Sources */,

@@ -35,7 +35,7 @@
         self.textColor = CX_BlackColor;
         self.font = [UIFont systemFontOfSize:14];
         self.backgroundColor = [UIColor clearColor];
-        self.clearButtonMode = UITextFieldViewModeWhileEditing;
+//        self.clearButtonMode = UITextFieldViewModeWhileEditing;
     }
     
     return self;

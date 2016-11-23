@@ -94,9 +94,13 @@
         [self addSubview:self.addButton];
         
         self.contentSize = CGSizeMake(self.viewSizeWidth, self.addButton.viewDistanceY);
+        
+        self.height = self.addButton.viewDistanceY+ViewMargin_10;
     }else
     {
         self.contentSize = CGSizeMake(self.viewSizeWidth, singleView.viewDistanceY);
+        
+        self.height = singleView.viewDistanceY+ViewMargin_10;
     }
 }
 
@@ -118,7 +122,7 @@
     {
         _addButton = [[UIButton alloc] initWithFrame:CGRectZero];
         _addButton.backgroundColor = [UIColor clearColor];
-        [_addButton setImage:[UIImage imageNamed:@"cx_publish_pic_add"] forState:UIControlStateNormal];
+        [_addButton setImage:[UIImage imageNamed:@"uploadImage_add"] forState:UIControlStateNormal];
         [_addButton addTarget:self action:@selector(addImageAction) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -140,6 +144,11 @@
     [self.singleImageViewArray removeObjectAtIndex:sender.tag-ViewTag];
     
     [self layoutFrames];
+    
+    if ([self.delegate respondsToSelector:@selector(cx_addImageViewDidDeleteImage:)])
+    {
+        [self.delegate cx_addImageViewDidDeleteImage:self];
+    }
 }
 
 

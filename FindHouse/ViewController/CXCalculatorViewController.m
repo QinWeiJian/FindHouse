@@ -78,7 +78,7 @@
 {
     if (!_businessView)
     {
-        _businessView = [[CXCalculatorPriceView alloc] initWithFrame:CGRectMake(0, self.headView.viewDistanceY, Screen_Width, Screen_Height-StatusNavigationBarHeight-self.headView.viewSizeHeight) priceType:CXCalculatorPriceViewTypeFund];
+        _businessView = [[CXCalculatorPriceView alloc] initWithFrame:CGRectMake(0, self.headView.viewDistanceY, Screen_Width, Screen_Height-StatusNavigationBarHeight-self.headView.viewSizeHeight-TabBarHeight) priceType:CXCalculatorPriceViewTypeFund];
     }
     
     return _businessView;

@@ -8,6 +8,7 @@
 
 #import "CXSaleHouseViewController.h"
 #import "CXSaleHouseCellView.h"
+#import "CXPublichSaleHouseViewController.h"
 
 @interface CXSaleHouseViewController ()
 
@@ -66,6 +67,7 @@
     if (!_onlineView)
     {
         _onlineView = [[CXSaleHouseCellView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 70) tapImage:ImageWithNamed(@"saleHouse_onlinePublish") title:@"在线发布" detail:@"在线一键快速发布房源信息"];
+        [_onlineView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onlineAction)]];
     }
     
     return _onlineView;
@@ -131,6 +133,14 @@
     }
     
     return _flowView;
+}
+
+#pragma mark - Action
+
+- (void)onlineAction
+{
+    CXPublichSaleHouseViewController *publishVC = [[CXPublichSaleHouseViewController alloc] init];
+    [self.navigationController pushViewController:publishVC animated:YES];
 }
 
 @end

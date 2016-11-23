@@ -14,6 +14,7 @@
 #import "CXHouseListCell.h"
 #import "CXContactSecretaryView.h"
 #import "CXReportHouseViewController.h"
+#import "ImageTextButton.h"
 
 #define BottomBarHeight 50
 
@@ -31,8 +32,8 @@ static NSString *houseListCellIdentifier = @"houseListCellIdentifier";
 @property(nonatomic,retain)UIView *customNavigationBarView;
 
 @property(nonatomic,retain)UIButton *collectButton;
-@property(nonatomic,retain)UIButton *secretaryButton;
-@property(nonatomic,retain)UIButton *onlineButton;
+@property(nonatomic,retain)ImageTextButton *secretaryButton;
+@property(nonatomic,retain)ImageTextButton *onlineButton;
 @property(nonatomic,retain)UIControl *ownerControl;
 
 @property(nonatomic,retain)CXBaseTableView *myTableView;
@@ -136,41 +137,41 @@ static NSString *houseListCellIdentifier = @"houseListCellIdentifier";
     return _collectButton;
 }
 
-- (UIButton *)secretaryButton
+- (ImageTextButton *)secretaryButton
 {
     if (!_secretaryButton)
     {
-        _secretaryButton = [[UIButton alloc] initWithFrame:CGRectMake(self.collectButton.viewDistanceX, self.collectButton.viewOriginY, Screen_Width/5, BottomBarHeight)];
+        _secretaryButton = [[ImageTextButton alloc] initWithFrame:CGRectMake(self.collectButton.viewDistanceX, self.collectButton.viewOriginY, Screen_Width/5, BottomBarHeight) image:ImageWithNamed(@"house_contact_secretary") title:@"咨询房小蜜"];
         _secretaryButton.titleLabel.font = FontSize(10);
         _secretaryButton.backgroundColor = CX_WhiteColor;
-        [_secretaryButton setTitle:@"咨询房小蜜" forState:UIControlStateNormal];
+//        [_secretaryButton setTitle:@"咨询房小蜜" forState:UIControlStateNormal];
         [_secretaryButton setTitleColor:CX_GrayColor forState:UIControlStateNormal];
-        [_secretaryButton setImage:ImageWithNamed(@"house_contact_secretary") forState:UIControlStateNormal];
+//        [_secretaryButton setImage:ImageWithNamed(@"house_contact_secretary") forState:UIControlStateNormal];
         [_secretaryButton addTarget:self action:@selector(contactSecretaryAction) forControlEvents:UIControlEventTouchUpInside];
         
-        _secretaryButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;//使图片和文字水平居中显示
-        [_secretaryButton setTitleEdgeInsets:UIEdgeInsetsMake(_secretaryButton.imageView.frame.size.height+ViewMargin_5+3 ,-_secretaryButton.imageView.frame.size.width, 0.0,0.0)];//文字距离上边框的距离增加imageView的高度，距离左边框减少imageView的宽度，距离下边框和右边框距离不变
-        [_secretaryButton setImageEdgeInsets:UIEdgeInsetsMake(-15, 0.0,0.0, -_secretaryButton.titleLabel.bounds.size.width)];//图片距离右边框距离减少图片的宽度，其它不边
+//        _secretaryButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;//使图片和文字水平居中显示
+//        [_secretaryButton setTitleEdgeInsets:UIEdgeInsetsMake(_secretaryButton.imageView.frame.size.height+ViewMargin_5+3 ,-_secretaryButton.imageView.frame.size.width, 0.0,0.0)];//文字距离上边框的距离增加imageView的高度，距离左边框减少imageView的宽度，距离下边框和右边框距离不变
+//        [_secretaryButton setImageEdgeInsets:UIEdgeInsetsMake(-15, 0,0.0, -_secretaryButton.titleLabel.bounds.size.width)];//图片距离右边框距离减少图片的宽度，其它不边
         
     }
     
     return _secretaryButton;
 }
 
-- (UIButton *)onlineButton
+- (ImageTextButton *)onlineButton
 {
     if (!_onlineButton)
     {
-        _onlineButton = [[UIButton alloc] initWithFrame:CGRectMake(self.secretaryButton.viewDistanceX, self.collectButton.viewOriginY, (Screen_Width*3/5)*2/5, BottomBarHeight)];
+        _onlineButton = [[ImageTextButton alloc] initWithFrame:CGRectMake(self.secretaryButton.viewDistanceX, self.collectButton.viewOriginY, (Screen_Width*3/5)*2/5, BottomBarHeight) image:ImageWithNamed(@"house_contact_online") title:@"在线联系"];
         _onlineButton.titleLabel.font = FontSize(10);
         _onlineButton.backgroundColor = CX_BlueColor;
-        [_onlineButton setTitle:@"在线联系" forState:UIControlStateNormal];
+//        [_onlineButton setTitle:@"在线联系" forState:UIControlStateNormal];
         [_onlineButton setTitleColor:CX_WhiteColor forState:UIControlStateNormal];
-        [_onlineButton setImage:ImageWithNamed(@"house_contact_online") forState:UIControlStateNormal];
+//        [_onlineButton setImage:ImageWithNamed(@"house_contact_online") forState:UIControlStateNormal];
         
-        _onlineButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;//使图片和文字水平居中显示
-        [_onlineButton setTitleEdgeInsets:UIEdgeInsetsMake(_onlineButton.imageView.frame.size.height+ViewMargin_5+3 ,-_onlineButton.imageView.frame.size.width, 0.0,0.0)];//文字距离上边框的距离增加imageView的高度，距离左边框减少imageView的宽度，距离下边框和右边框距离不变
-        [_onlineButton setImageEdgeInsets:UIEdgeInsetsMake(-15, 0.0,0.0, -_onlineButton.titleLabel.bounds.size.width)];//图片距离右边框距离减少图片的宽度，其它不边
+//        _onlineButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;//使图片和文字水平居中显示
+//        [_onlineButton setTitleEdgeInsets:UIEdgeInsetsMake(_onlineButton.imageView.frame.size.height+ViewMargin_5+3 ,-_onlineButton.imageView.frame.size.width, 0.0,0.0)];//文字距离上边框的距离增加imageView的高度，距离左边框减少imageView的宽度，距离下边框和右边框距离不变
+//        [_onlineButton setImageEdgeInsets:UIEdgeInsetsMake(-15, 0.0,0.0, -_onlineButton.titleLabel.bounds.size.width)];//图片距离右边框距离减少图片的宽度，其它不边
         
     }
     
