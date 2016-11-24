@@ -14,6 +14,7 @@
 #import "CXSaleHouseNormalInputCellView.h"
 #import "CXSaleHouseChooseCellView.h"
 #import "CXSaleHouseFloorCellView.h"
+#import "CXChooseHouseTypePickerView.h"
 
 static NSString *cellIdentifier = @"cellIdentifier";
 
@@ -37,6 +38,8 @@ static NSString *cellIdentifier = @"cellIdentifier";
 @property(nonatomic,retain)CXSaleHouseNormalInputCellView *priceCellView;
 @property(nonatomic,retain)CXSaleHouseChooseCellView *houseTypeCellView;
 @property(nonatomic,retain)CXSaleHouseFloorCellView *houseFloorCellView;
+
+@property(nonatomic,retain)CXChooseHouseTypePickerView *houseTypePickerView;
 
 @end
 
@@ -209,6 +212,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
     if (!_houseTypeCellView)
     {
         _houseTypeCellView = [[CXSaleHouseChooseCellView alloc] initWithFrame:self.blockCellView.frame title:@"户型" detail:@"选择户型"];
+        [_houseTypeCellView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(chooseHouseType)]];
     }
     
     return _houseTypeCellView;
@@ -222,6 +226,22 @@ static NSString *cellIdentifier = @"cellIdentifier";
     }
     
     return _houseFloorCellView;
+}
+
+- (CXChooseHouseTypePickerView *)houseTypePickerView
+{
+    if (!_houseTypePickerView)
+    {
+        _houseTypePickerView = [[CXChooseHouseTypePickerView alloc] init];
+        
+        WS(weakSelf);
+        
+        _houseTypePickerView.commitBlock = ^(NSString *typeString){
+            weakSelf.houseTypeCellView.detailLabel.text = typeString;
+        };
+    }
+    
+    return _houseTypePickerView;
 }
 
 #pragma mark - UITableView Delegate && DataSource
@@ -474,6 +494,13 @@ static NSString *cellIdentifier = @"cellIdentifier";
 {
     [picker dismissViewControllerAnimated:YES completion:nil];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
+
+#pragma mark - Action
+
+- (void)chooseHouseType
+{
+    [self.houseTypePickerView show];
 }
 
 @end
