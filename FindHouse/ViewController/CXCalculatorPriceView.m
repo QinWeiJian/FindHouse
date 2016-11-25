@@ -55,6 +55,7 @@
         _footerView = [[CXInsetsField alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, CellHeight) margin:ViewMargin_10];
         _footerView.enabled = NO;
         _footerView.textColor = CX_GrayColor;
+        _footerView.font = FontSize(12);
         _footerView.text = @"以上为2016年央行最新利率，计算结果仅供参考。";
     }
     

@@ -395,7 +395,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
 
 - (void)cx_addImageViewDidDeleteImage:(CXAddImageView *)addView
 {
-    [self.myTableView reloadData];
+    [self.myTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark - UIActionSheetDelegate
@@ -465,7 +465,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
     
     GWLPhotoLibrayController *photoSelector = [GWLPhotoLibrayController photoLibrayControllerWithBlock:^(NSArray *images) {
         [weakSelf.uploadImageView addImages:images];
-        [weakSelf.myTableView reloadData];
+        [weakSelf.myTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     }];
     
     NSInteger maxCount = 8 - self.uploadImageView.singleImageViewArray.count;
@@ -483,7 +483,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
     UIImage *selectImage = [CXGlobalTool cx_fixImageOrientation:[info valueForKey:UIImagePickerControllerOriginalImage]];
     
     [self.uploadImageView addImage:selectImage];
-    [self.myTableView reloadData];
+    [self.myTableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     
     [picker dismissViewControllerAnimated:YES completion:nil];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
